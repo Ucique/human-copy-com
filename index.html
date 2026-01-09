@@ -55,7 +55,14 @@
           <h2>Kostenloses Mini-Audit</h2>
           <p class="sub">Schick mir 300–600 Wörter oder einen Link. Du bekommst ehrliches Feedback + einen überarbeiteten Beispielabsatz.</p>
         </div>
-        <form class="form" id="leadForm" method="POST">
+        <div class="form-intent" id="formIntent" hidden>
+          <p class="form-intent__text" id="formIntentText"></p>
+          <button class="form-intent__reset" type="button" id="formIntentReset">Ändern</button>
+        </div>
+        <form class="form" id="leadForm" method="POST" action="https://formspree.io/f/[FORMSPREE_FORM_ID]">
+          <input type="hidden" name="request_type" id="requestType" value="mini_audit" />
+          <input type="hidden" name="selected_package" id="selectedPackage" value="" />
+          <input type="hidden" name="_subject" id="formSubject" value="[Mini-Audit] – Anfrage von" />
           <div class="form__grid">
             <label>
               Name
@@ -73,6 +80,10 @@
           <label>
             Ziel (Leads / Verkauf / Klarheit)
             <input name="goal" type="text" autocomplete="off" />
+          </label>
+          <label>
+            Deadline / Dringlichkeit (optional)
+            <input name="deadline" type="text" autocomplete="off" />
           </label>
           <button class="btn btn--full" type="submit">Kostenloses Mini-Audit anfragen</button>
           <p class="tiny muted">Kein Newsletter. Keine Automationen. Nur Antwort. <a class="link" href="/datenschutz.html">Datenschutz</a></p>
@@ -156,7 +167,7 @@
               <li>Klarheit &amp; Kürzen</li>
               <li>1 Feedbackrunde</li>
             </ul>
-            <a class="btn btn--ghost btn--full" href="#audit">Anfragen</a>
+            <a class="btn btn--ghost btn--full" href="#audit" data-package="Paket A – Quick Polish">Anfragen</a>
           </article>
 
           <article class="card package-card package-card--highlight">
@@ -171,7 +182,7 @@
               <li>Brand-Voice Feinabstimmung</li>
               <li>2 Feedbackrunden</li>
             </ul>
-            <a class="btn btn--full" href="#audit">Jetzt starten</a>
+            <a class="btn btn--full" href="#audit" data-package="Paket B – Landingpage Upgrade">Jetzt starten</a>
           </article>
 
           <article class="card package-card">
@@ -185,7 +196,7 @@
               <li>Prompt-Snippets &amp; Checkliste</li>
               <li>Feedback-Call (30 min)</li>
             </ul>
-            <a class="btn btn--ghost btn--full" href="#audit" data-goal="Voice System / Call">Call anfragen</a>
+            <a class="btn btn--ghost btn--full" href="#audit" data-package="Paket C – Voice System" data-goal="Voice System / Call">Call anfragen</a>
           </article>
         </div>
         <p class="tiny muted packages-note">Unsicher? Starte mit dem kostenlosen Mini-Audit – das ist der einfachste Weg zu einer ehrlichen Einschätzung.</p>
@@ -292,6 +303,7 @@
   </div>
 
   <script src="app.js"></script>
+  <script src="assets/js/form-intent.js"></script>
   <script src="assets/js/consent.js"></script>
 </body>
 </html>
