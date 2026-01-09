@@ -12,6 +12,7 @@
   const statusEl = document.getElementById('formStatus');
   const intentBox = document.getElementById('formIntent');
   const submitButton = form ? form.querySelector('button[type="submit"]') : null;
+  const endpoint = 'https://formspree.io/f/mlggrbdv';
 
   function setStatus(msg, ok = true) {
     if (!statusEl) return;
@@ -43,6 +44,7 @@
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
+    form.action = endpoint;
     if (submitButton) {
       submitButton.disabled = true;
       submitButton.textContent = 'Senden…';
@@ -51,7 +53,7 @@
     setStatus('Sende …', true);
 
     try {
-      const response = await fetch(form.action, {
+      const response = await fetch(endpoint, {
         method: 'POST',
         body: new FormData(form),
         headers: { 'Accept': 'application/json' }
@@ -60,18 +62,32 @@
       if (response.ok) {
         renderSuccessView();
       } else {
-        setStatus('Senden hat nicht geklappt. Bitte versuch es nochmal oder schreib direkt an hello@human-copy.com', false);
+        let responseText = '';
+        try {
+          const data = await response.clone().json();
+          responseText = JSON.stringify(data);
+        } catch (err) {
+          responseText = await response.clone().text();
+        }
+        console.log('Formspree error', response.status, responseText);
+        const hint = response.status === 403
+          ? ' Wenn Formspree Domain Restriction aktiv ist: bitte Domain hinzufügen.'
+          : '';
+        setStatus(`Senden fehlgeschlagen (${response.status}). Bitte versuch es nochmal oder schreib direkt an hello@human-copy.com.${hint}`, false);
         if (submitButton) {
           submitButton.disabled = false;
           submitButton.textContent = 'Kostenloses Mini-Audit anfragen';
         }
       }
     } catch (error) {
-      setStatus('Senden hat nicht geklappt. Bitte versuch es nochmal oder schreib direkt an hello@human-copy.com', false);
+      console.log('Formspree network error', error);
+      setStatus('Senden fehlgeschlagen (Netzwerk). Bitte versuch es nochmal oder schreib direkt an hello@human-copy.com.', false);
       if (submitButton) {
         submitButton.disabled = false;
         submitButton.textContent = 'Kostenloses Mini-Audit anfragen';
       }
+      form.action = endpoint;
+      form.submit();
     }
   });
 })();
