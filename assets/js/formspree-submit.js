@@ -1,0 +1,93 @@
+/*
+  Formspree submission handler
+  Checklist:
+  - Mini-Audit sends request_type=mini_audit and empty selected_package
+  - Package click sends request_type=package and selected_package
+  - Success view replaces form
+  - Errors show inline without layout shifts
+*/
+
+(function () {
+  const form = document.getElementById('leadForm');
+  const statusEl = document.getElementById('formStatus');
+  const intentBox = document.getElementById('formIntent');
+  const submitButton = form ? form.querySelector('button[type="submit"]') : null;
+  const endpoint = 'https://formspree.io/f/mlggrbdv';
+
+  function setStatus(msg, ok = true) {
+    if (!statusEl) return;
+    statusEl.textContent = msg;
+    statusEl.style.color = ok ? 'rgba(242, 239, 233, 0.9)' : 'rgba(242, 239, 233, 0.7)';
+  }
+
+  function renderSuccessView() {
+    if (!form) return;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'form form-success';
+    wrapper.innerHTML = `
+      <h3>Danke – gesendet.</h3>
+      <p class="muted">Ich melde mich persönlich per E-Mail. Kein Newsletter. Keine Automationen.</p>
+      <button class="btn btn--ghost" type="button" id="formReset">Noch eine Anfrage senden</button>
+    `;
+    form.replaceWith(wrapper);
+    if (intentBox) intentBox.hidden = true;
+
+    const resetButton = wrapper.querySelector('#formReset');
+    if (resetButton) {
+      resetButton.addEventListener('click', () => {
+        window.location.reload();
+      });
+    }
+  }
+
+  if (!form) return;
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    form.action = endpoint;
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Senden…';
+    }
+
+    setStatus('Sende …', true);
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        renderSuccessView();
+      } else {
+        let responseText = '';
+        try {
+          const data = await response.clone().json();
+          responseText = JSON.stringify(data);
+        } catch (err) {
+          responseText = await response.clone().text();
+        }
+        console.log('Formspree error', response.status, responseText);
+        const hint = response.status === 403
+          ? ' Wenn Formspree Domain Restriction aktiv ist: bitte Domain hinzufügen.'
+          : '';
+        setStatus(`Senden fehlgeschlagen (${response.status}). Bitte versuch es nochmal oder schreib direkt an hello@human-copy.com.${hint}`, false);
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = 'Kostenloses Mini-Audit anfragen';
+        }
+      }
+    } catch (error) {
+      console.log('Formspree network error', error);
+      setStatus('Senden fehlgeschlagen (Netzwerk). Bitte versuch es nochmal oder schreib direkt an hello@human-copy.com.', false);
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Kostenloses Mini-Audit anfragen';
+      }
+      form.action = endpoint;
+      form.submit();
+    }
+  });
+})();
