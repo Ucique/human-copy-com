@@ -19,8 +19,24 @@
     });
   }
 
+  const packagesLink = document.querySelector('a[href="#pakete"]');
+  const packagesDetails = document.querySelector('#pakete details');
+  if (packagesLink && packagesDetails) {
+    packagesLink.addEventListener('click', () => {
+      packagesDetails.open = true;
+    });
+  }
+
   const form = document.getElementById('leadForm');
   const statusEl = document.getElementById('formStatus');
+  const goalInput = document.querySelector('input[name="goal"]');
+  document.querySelectorAll('[data-goal]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (goalInput) {
+        goalInput.value = link.getAttribute('data-goal') || '';
+      }
+    });
+  });
 
   const FORMSPREE_ENDPOINT = "";
 
