@@ -59,10 +59,11 @@
           <p class="form-intent__text" id="formIntentText"></p>
           <button class="form-intent__reset" type="button" id="formIntentReset">Ändern</button>
         </div>
-        <form class="form" id="leadForm" method="POST" action="https://formspree.io/f/[FORMSPREE_FORM_ID]">
-          <input type="hidden" name="request_type" id="requestType" value="mini_audit" />
-          <input type="hidden" name="selected_package" id="selectedPackage" value="" />
-          <input type="hidden" name="_subject" id="formSubject" value="[Mini-Audit] – Anfrage von" />
+        <form class="form" id="leadForm" method="POST" action="https://formspree.io/f/mlggrbdv">
+          <input type="hidden" name="request_type" id="request_type" value="mini_audit" />
+          <input type="hidden" name="selected_package" id="selected_package" value="" />
+          <input type="hidden" name="_subject" id="subject" value="[Mini-Audit] Anfrage" />
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
           <div class="form__grid">
             <label>
               Name
@@ -75,7 +76,7 @@
           </div>
           <label>
             Text / Link / Kontext
-            <textarea required name="message" rows="6"></textarea>
+            <textarea required name="context" rows="6"></textarea>
           </label>
           <label>
             Ziel (Leads / Verkauf / Klarheit)
@@ -304,6 +305,7 @@
 
   <script src="app.js"></script>
   <script src="assets/js/form-intent.js"></script>
+  <script src="assets/js/formspree-submit.js"></script>
   <script src="assets/js/consent.js"></script>
 </body>
 </html>

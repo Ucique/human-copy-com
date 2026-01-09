@@ -364,11 +364,6 @@ h1 {
   gap: 12px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-.form__grid {
-  display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
 .form label {
   display: block;
   margin-bottom: 12px;
@@ -421,6 +416,13 @@ h1 {
 }
 .form-intent__reset:hover {
   color: var(--text);
+}
+
+.form-success h3 {
+  margin-bottom: 8px;
+}
+.form-success p {
+  margin-bottom: 16px;
 }
 
 /* Footer */
