@@ -421,6 +421,8 @@ h1 {
 .legal {
   line-height: 1.7;
   padding: 22px;
+  max-width: 820px;
+  margin: 0 auto;
 }
 .legal p {
   margin: 0 0 12px;

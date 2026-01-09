@@ -167,6 +167,7 @@
   }
 
   function init() {
+    updateConsentMode({ marketing: false, analytics: false });
     const stored = readStoredConsent();
     if (stored) {
       applyConsent(stored);
