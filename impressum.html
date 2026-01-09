@@ -93,9 +93,62 @@
         <div class="footer__links">
           <a href="/impressum.html">Impressum</a>
           <a href="/datenschutz.html">Datenschutz</a>
+          <a href="/datenschutz.html" data-consent-open>Cookie-Einstellungen</a>
         </div>
       </div>
     </div>
   </footer>
+
+  <div class="consent" id="consentBanner" hidden>
+    <div class="consent__panel" role="dialog" aria-labelledby="consentTitle" aria-modal="true">
+      <div class="consent__content">
+        <h2 id="consentTitle">Cookie-Einstellungen</h2>
+        <p class="muted">Wir nutzen Cookies, um Marketing- und Statistikfunktionen erst nach deiner Einwilligung zu aktivieren. Notwendige Cookies sind immer aktiv.</p>
+      </div>
+      <div class="consent__actions">
+        <button class="btn btn--ghost" id="consentReject" type="button">Ablehnen</button>
+        <button class="btn btn--ghost" id="consentOpenSettings" type="button">Einstellungen</button>
+        <button class="btn" id="consentAcceptAll" type="button">Alle akzeptieren</button>
+      </div>
+      <div class="consent__settings" id="consentSettings" hidden>
+        <div class="consent__option">
+          <div>
+            <p><strong>Notwendig</strong></p>
+            <p class="muted">Erforderlich für den Betrieb der Website.</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked disabled />
+            <span></span>
+          </label>
+        </div>
+        <div class="consent__option">
+          <div>
+            <p><strong>Marketing</strong></p>
+            <p class="muted">Google Ads &amp; Meta Pixel.</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="consentMarketing" />
+            <span></span>
+          </label>
+        </div>
+        <div class="consent__option">
+          <div>
+            <p><strong>Statistik</strong></p>
+            <p class="muted">Google Analytics 4.</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="consentAnalytics" />
+            <span></span>
+          </label>
+        </div>
+        <div class="consent__settings-actions">
+          <button class="btn btn--ghost" id="consentClose" type="button">Schließen</button>
+          <button class="btn" id="consentSave" type="button">Auswahl speichern</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/consent.js"></script>
 </body>
 </html>

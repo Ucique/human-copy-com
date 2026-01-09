@@ -422,6 +422,20 @@ h1 {
   line-height: 1.7;
   padding: 22px;
 }
+.legal p {
+  margin: 0 0 12px;
+}
+.legal ul {
+  margin: 6px 0 12px 18px;
+  color: rgba(242, 239, 233, 0.92);
+}
+.legal li + li {
+  margin-top: 6px;
+}
+.legal__stand {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
 .legal__section {
   margin-bottom: 22px;
 }
@@ -432,6 +446,95 @@ h1 {
   font-size: 1.05rem;
   font-weight: 600;
   margin-bottom: 8px;
+}
+
+/* Consent banner */
+.consent {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: end center;
+  padding: 20px;
+  background: rgba(6, 6, 8, 0.55);
+  z-index: 100;
+}
+.consent[hidden] {
+  display: none;
+}
+.consent__panel {
+  width: min(960px, 100%);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(15, 15, 21, 0.98);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+.consent__content h2 {
+  margin-bottom: 8px;
+  font-size: 1.15rem;
+}
+.consent__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.consent__settings {
+  margin-top: 16px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  display: grid;
+  gap: 12px;
+}
+.consent__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.consent__option p {
+  margin: 0;
+}
+.consent__settings-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.switch {
+  position: relative;
+  width: 46px;
+  height: 26px;
+  display: inline-block;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch span {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: rgba(242, 239, 233, 0.18);
+  transition: background 0.2s ease;
+}
+.switch span::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 3px;
+  top: 3px;
+  border-radius: 50%;
+  background: var(--text);
+  transition: transform 0.2s ease;
+}
+.switch input:checked + span {
+  background: rgba(122, 76, 207, 0.45);
+}
+.switch input:checked + span::after {
+  transform: translateX(20px);
 }
 
 /* Responsive styles */
@@ -445,5 +548,9 @@ h1 {
   }
   .packages-grid {
     grid-template-columns: 1fr;
+  }
+  .consent__option {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
