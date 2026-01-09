@@ -1,10 +1,19 @@
 <!doctype html>
 <html lang="de" id="top">
 <head>
+  <script>
+    if (location.protocol === "http:") {
+      location.replace("https://" + location.host + location.pathname + location.search + location.hash);
+    }
+  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Human Copy – KI-Texte in glaubwürdige Sprache</title>
   <meta name="description" content="Human Copy überarbeitet KI-Entwürfe zu klarer, menschlicher Sprache. Für Websites, Landingpages und Brand Copy im DACH-Raum. Kostenloses Mini-Audit anfragen." />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
+  <link rel="canonical" href="https://human-copy.com/" />
   <meta name="theme-color" content="#0B0B0F" />
   <meta property="og:title" content="Human Copy – KI-Texte in glaubwürdige Sprache" />
   <meta property="og:description" content="Ich überarbeite KI-Entwürfe so, dass sie nach dir klingen, Vertrauen schaffen und konvertieren." />
