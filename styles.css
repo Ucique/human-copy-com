@@ -158,6 +158,9 @@ h1 {
   font-size: 0.9rem;
   color: var(--muted);
 }
+.trust-line {
+  margin-top: 8px;
+}
 
 /* Buttons */
 .btn {
