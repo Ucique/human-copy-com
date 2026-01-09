@@ -417,6 +417,23 @@ h1 {
   gap: 20px;
 }
 
+/* Legal page */
+.legal {
+  line-height: 1.7;
+  padding: 22px;
+}
+.legal__section {
+  margin-bottom: 22px;
+}
+.legal__section:last-child {
+  margin-bottom: 0;
+}
+.legal__section h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
 /* Responsive styles */
 @media (max-width: 980px) {
   .hero__grid,
