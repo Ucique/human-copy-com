@@ -9,6 +9,10 @@
   const requestTypeInput = document.getElementById('request_type');
   const selectedPackageInput = document.getElementById('selected_package');
   const subjectInput = document.getElementById('subject');
+  const submitButton = document.getElementById('formSubmit');
+  const helper = document.getElementById('ctaHelper');
+  const defaultLabel = submitButton?.getAttribute('data-default-label') || 'Gratis Mini-Audit anfragen';
+  const packageLabel = submitButton?.getAttribute('data-package-label') || 'Paket anfragen';
 
   const intentBox = document.getElementById('formIntent');
   const intentText = document.getElementById('formIntentText');
@@ -27,6 +31,26 @@
       } else {
         intentText.textContent = '';
         intentBox.hidden = true;
+      }
+    }
+
+    if (submitButton) {
+      if (packageName) {
+        submitButton.textContent = packageLabel;
+        submitButton.setAttribute('aria-label', packageLabel);
+      } else {
+        submitButton.textContent = defaultLabel;
+        submitButton.setAttribute('aria-label', defaultLabel);
+      }
+    }
+
+    if (helper) {
+      if (packageName) {
+        helper.textContent = `Du fragst gerade: ${packageName} an.`;
+        helper.hidden = false;
+      } else {
+        helper.textContent = '';
+        helper.hidden = true;
       }
     }
   }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de" id="top">
+<html lang="de" id="top" data-variant="dach-clean">
 <head>
   <script>
     if (location.protocol === "http:") {
@@ -104,7 +104,8 @@
             Deadline / Dringlichkeit (optional)
             <input name="deadline" type="text" autocomplete="off" />
           </label>
-          <button class="btn btn--full" type="submit">Kostenloses Mini-Audit anfragen</button>
+          <button class="btn btn--full" type="submit" id="formSubmit" aria-label="Gratis Mini-Audit anfragen" data-default-label="Gratis Mini-Audit anfragen" data-package-label="Paket anfragen">Gratis Mini-Audit anfragen</button>
+          <div class="cta-helper" id="ctaHelper" aria-live="polite" hidden></div>
           <p class="tiny muted">Kein Newsletter. Keine Automationen. Nur Antwort. <a class="link" href="/datenschutz.html">Datenschutz</a></p>
           <p class="tiny muted" id="formStatus" role="status" aria-live="polite"></p>
         </form>

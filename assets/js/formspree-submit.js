@@ -12,6 +12,7 @@
   const statusEl = document.getElementById('formStatus');
   const intentBox = document.getElementById('formIntent');
   const submitButton = form ? form.querySelector('button[type="submit"]') : null;
+  const defaultLabel = submitButton?.getAttribute('data-default-label') || 'Gratis Mini-Audit anfragen';
   const endpoint = 'https://formspree.io/f/mlggrbdv';
 
   function setStatus(msg, ok = true) {
@@ -76,7 +77,7 @@
         setStatus(`Senden fehlgeschlagen (${response.status}). Bitte versuch es nochmal oder schreib direkt an hello@human-copy.com.${hint}`, false);
         if (submitButton) {
           submitButton.disabled = false;
-          submitButton.textContent = 'Kostenloses Mini-Audit anfragen';
+          submitButton.textContent = defaultLabel;
         }
       }
     } catch (error) {
@@ -84,7 +85,7 @@
       setStatus('Senden fehlgeschlagen (Netzwerk). Bitte versuch es nochmal oder schreib direkt an hello@human-copy.com.', false);
       if (submitButton) {
         submitButton.disabled = false;
-        submitButton.textContent = 'Kostenloses Mini-Audit anfragen';
+        submitButton.textContent = defaultLabel;
       }
       form.action = endpoint;
       form.submit();
