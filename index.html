@@ -1,16 +1,32 @@
 <!doctype html>
-<html lang="de" id="top">
+<html lang="de" id="top" data-variant="dach-clean">
 <head>
+  <script>
+    if (location.protocol === "http:") {
+      location.replace("https://" + location.host + location.pathname + location.search + location.hash);
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DBL2MMR17"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2DBL2MMR17');
+  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Human Copy — KI-Texte zu menschlichen Texten</title>
-  <meta name="description" content="Ich verwandle KI-Entwürfe und Rohtexte in klare, menschliche Website-Texte, die Vertrauen aufbauen und Anfragen bringen. Für Solo-Selbstständige im DACH‑Raum." />
+  <title>Human Copy – KI-Texte in glaubwürdige Sprache</title>
+  <meta name="description" content="Human Copy überarbeitet KI-Entwürfe zu klarer, menschlicher Sprache. Für Websites, Landingpages und Brand Copy im DACH-Raum. Kostenloses Mini-Audit anfragen." />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
+  <link rel="canonical" href="https://human-copy.com/" />
   <meta name="theme-color" content="#0B0B0F" />
-  <meta property="og:title" content="Human Copy — AI-Entwurf zu Human Copy" />
-  <meta property="og:description" content="KI‑Texte, die wie KI klingen? Ich mache daraus klare, menschliche Texte, die funktionieren." />
+  <meta property="og:title" content="Human Copy – KI-Texte in glaubwürdige Sprache" />
+  <meta property="og:description" content="Ich überarbeite KI-Entwürfe so, dass sie nach dir klingen, Vertrauen schaffen und konvertieren." />
   <meta property="og:type" content="website" />
 
-  <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,394 +41,299 @@
       <a class="brand" href="#top" aria-label="Zur Startseite">
         <span class="brand__dot" aria-hidden="true"></span>
         <span class="brand__name">Human Copy</span>
-        <span class="brand__tag">AI → Human Copy</span>
+        <span class="brand__tag">human-copy.com</span>
       </a>
-
-      <n
-        
-      <button class="menu" id="menuBtn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileNav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <div class="mobile" id="mobileNav" hidden>
-      <div class="container mobile__inner">
-        <a href="#leistung">Leistung</a>
-        <a href="#pakete">Pakete</a>
-        <a href="#faq">FAQ</a>
-        <a class="btn" href="#kontakt">Anfrage</a>
-      </div>
+      <a class="btn btn--small" href="#audit">Kostenloses Mini-Audit anfragen</a>
     </div>
   </header>
 
   <main id="main">
-    <!-- HERO -->
     <section class="hero">
       <div class="container hero__grid">
-         <div class="hero__copy">
-      <h1> Human Copy.<br>KI-Entwürfe, neu geschrieben.</h1>
-        <p class="lead">Ich verwandle KI-Texte in klare, menschliche Sprache.</p>
-      </div>
-      <div class="hero__cta">
-        <a class="btn" href="#kontakt">Text senden</a>
-     
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY / LEISTUNG -->
-    <section class="section" id="leistung">
-      <div class="container">
-        <div class="section__head">
-          <h2>Warum viele KI‑Texte nicht funktionieren</h2>
-          <p class="sub">Korrekt ist nicht gleich glaubwürdig. Leser merken’s – und klicken weg.</p>
-        </div>
-
-        <div class="grid3">
-          <div class="card">
-            <h3>Austauschbar</h3>
-            <p>Gleiche Phrasen, gleicher Rhythmus, keine echte Haltung. Deine Marke verschwindet.</p>
-          </div>
-          <div class="card">
-            <h3>Unklar</h3>
-            <p>Zu viel Erklärung, zu wenig Entscheidungshilfe. Nutzen &amp; Angebot bleiben weich.</p>
-          </div>
-          <div class="card">
-            <h3>Kein Vertrauen</h3>
-            <p>Wenn es nach KI riecht, wirkt es unsicher. Und Unsicherheit kostet Leads.</p>
+        <div class="hero__copy">
+          <h1>Mach aus KI-Texten glaubwürdige, menschliche Sprache.</h1>
+          <p class="lead">Ich überarbeite KI-Entwürfe so, dass sie nach dir klingen, Vertrauen schaffen und konvertieren.</p>
+          <div class="hero__badges">
+            <span>Für Websites · Landingpages · Brand Copy · Natürliches Deutsch (DACH) · DE/EN · 24–48h Turnaround</span>
           </div>
         </div>
-
-        <div class="divider"></div>
-
-        <div class="section__head">
-          <h2>Was ich konkret für dich tue</h2>
-          <p class="sub">Ich überarbeite deine Texte so, dass sie nach dir klingen – und sauber verkaufen.</p>
-        </div>
-
-        <div class="grid2">
-          <div class="card">
-            <h3>AI‑Humanisierung</h3>
-            <ul class="check">
-              <li>Stimme, Rhythmus, Haltung</li>
-              <li>Weniger Floskeln, mehr Präzision</li>
-              <li>Natürliches Deutsch (DACH)</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Conversion &amp; Klarheit</h3>
-            <ul class="check">
-              <li>Struktur &amp; Leserführung</li>
-              <li>Value Proposition schärfen</li>
-              <li>CTA, Einwände, FAQ</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="note">
-          <strong>Wichtig:</strong> Ich schreibe nicht „laut“. Ich schreibe so, dass man dich ernst nimmt.
+        <div class="hero__cta">
+          <a class="btn btn--full" href="#audit">Kostenloses Mini-Audit anfragen</a>
+          <p class="tiny muted trust-line">300–600 Wörter · ehrliches Feedback · kein Spam</p>
+          <a class="link" href="#beispiele">Vorher/Nachher ansehen</a>
+          <p class="micro">Kein Umschreiben. Kein Marketing-Lärm. Handwerk.</p>
         </div>
       </div>
     </section>
 
-    <!-- FOR WHO -->
-    <section class="section section--alt" id="fuerwen">
-      <div class="container">
-        <div class="section__head">
-          <h2>Für wen – und für wen nicht</h2>
-          <p class="sub">Damit es schnell passt (und du schnell Ergebnis siehst).</p>
-        </div>
-
-        <div class="grid2">
-          <div class="card">
-            <h3>Passt, wenn du…</h3>
-            <ul class="check">
-              <li>selbstständig bist (Consulting/Service/SaaS/Coaching)</li>
-              <li>eine Website/Landingpage/Angebotsseite hast</li>
-              <li>KI nutzt – aber Ergebnis nicht magst</li>
-              <li>seriös verkaufen willst, ohne Show</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Passt nicht, wenn du…</h3>
-            <ul class="x">
-              <li>„schnell schnell“ Werbetexte willst</li>
-              <li>Buzzwords und Hype bevorzugst</li>
-              <li>nur Masse statt Wirkung suchst</li>
-              <li>keine Zeit für Feedback hast</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section class="section" id="prozess">
-      <div class="container">
-        <div class="section__head">
-          <h2>So läuft es ab</h2>
-          <p class="sub">Ein klarer Prozess, damit du dich nicht kümmern musst.</p>
-        </div>
-
-        <ol class="steps">
-          <li>
-            <span class="steps__n">1</span>
-            <div>
-              <h3>Text senden</h3>
-              <p>Website‑Link oder Copy in ein Dokument. Wenn’s KI‑Entwurf ist: perfekt.</p>
-            </div>
-          </li>
-          <li>
-            <span class="steps__n">2</span>
-            <div>
-              <h3>Analyse</h3>
-              <p>Ton, Struktur, Einwände, Klarheit. Ich sage dir ehrlich, wo’s hakt.</p>
-            </div>
-          </li>
-          <li>
-            <span class="steps__n">3</span>
-            <div>
-              <h3>Überarbeitung</h3>
-              <p>Humanisierung + Conversion‑Schärfung. Ohne, dass es nach „Marketing“ klingt.</p>
-            </div>
-          </li>
-          <li>
-            <span class="steps__n">4</span>
-            <div>
-              <h3>1 Feedbackrunde</h3>
-              <p>Du gibst Rückmeldung – ich feile nach. Danach: finale Version.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- PACKAGES -->
-    <section class="section section--alt" id="pakete">
-      <div class="container">
-        <div class="section__head">
-          <h2>Pakete</h2>
-          <p class="sub">Drei klare Pakete – je nach Umfang und Ziel.</p>
-        </div>
-
-        <div class="pricing">
-          <article class="price price--main">
-            <div class="price__top">
-              <h3>Package B — Website‑Upgrade</h3>
-              <p class="muted">Empfohlen für schnelle, seriöse Wirkung.</p>
-            </div>
-            <p class="price__num">€450–€900</p>
-            <ul class="check">
-              <li>Homepage ODER Landingpage (bis ca. 1 500–2 500 Wörter)</li>
-              <li>AI‑Humanisierung (Stimme, Ton, Lesefluss)</li>
-              <li>Struktur &amp; Conversion‑Schärfung</li>
-              <li>1 Feedbackrunde</li>
-              <li>Delivery 2–5 Werktage</li>
-            </ul>
-            <a class="btn btn--full" href="#kontakt">Anfrage zu Package B</a>
-            <p class="tiny muted">Du bekommst vorher ein klares Angebot nach Sichtung.</p>
-          </article>
-
-          <article class="price">
-            <div class="price__top">
-              <h3>Package A — Quick Humanize</h3>
-              <p class="muted">Für einzelne Seiten mit direktem Bedarf.</p>
-            </div>
-            <p class="price__num">€250–€450</p>
-            <ul class="check">
-              <li>1 Seite (z. B. Angebot/Über mich)</li>
-              <li>Humanisierung + Klarheit</li>
-              <li>1 Feedbackrunde</li>
-              <li>Delivery 48–72h</li>
-            </ul>
-            <a class="btn btn--ghost btn--full" href="#kontakt">Anfragen</a>
-          </article>
-
-          <article class="price">
-            <div class="price__top">
-              <h3>Package C — Full Funnel Copy</h3>
-              <p class="muted">Für vollständige Website- oder Funnel-Texte.</p>
-            </div>
-            <p class="price__num">ab €1 200</p>
-            <ul class="check">
-              <li>Homepage + Angebot + About + FAQ/CTA</li>
-              <li>Ton/Voice‑System (kurzer Guide)</li>
-              <li>Priorisierte Delivery</li>
-            </ul>
-            <a class="btn btn--ghost btn--full" href="#kontakt">Anfragen</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- MINI AUDIT -->
     <section class="section" id="audit">
       <div class="container">
-        <div class="audit">
-          <div>
-            <h2>Mini‑Audit (48h)</h2>
-            <p class="sub">Du bekommst in kurzer Form: 5 konkrete Text‑Fixes + klare Prioritäten.</p>
-            <ul class="check">
-              <li>Kurzanalyse deiner Seite</li>
-              <li>5 konkrete Verbesserungspunkte</li>
-              <li>1 Beispiel‑Überarbeitung (kurzer Abschnitt)</li>
-            </ul>
-          </div>
-          <div class="audit__cta">
-            <p class="price__num">€49</p>
-            <p class="tiny muted">Wird bei Auftrag angerechnet.</p>
-            <a class="btn btn--full" href="#kontakt">Mini‑Audit anfragen</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TRUST -->
-    <section class="section" id="vertrauen">
-      <div class="container">
         <div class="section__head">
-          <h2>Warum das funktioniert</h2>
-          <p class="sub">Ich kombiniere Textgefühl mit Struktur. Beides ist nötig.</p>
+          <h2>Kostenloses Mini-Audit</h2>
+          <p class="sub">Schick mir 300–600 Wörter oder einen Link. Du bekommst ehrliches Feedback + einen überarbeiteten Beispielabsatz.</p>
         </div>
-
-        <div class="grid3">
-          <div class="card">
-            <h3>Stimme</h3>
-            <p>Dein Ton wird nicht glattgebügelt, sondern sichtbar gemacht.</p>
-          </div>
-          <div class="card">
-            <h3>Klarheit</h3>
-            <p>Weniger Wörter – mehr Entscheidung. Leser sollen wissen, was du anbietest.</p>
-          </div>
-          <div class="card">
-            <h3>Seriosität</h3>
-            <p>Keine „Alpha‑Marketing“-Masche. Das ist Premium‑Handwerk.</p>
-          </div>
+        <div class="form-intent" id="formIntent" hidden>
+          <p class="form-intent__text" id="formIntentText"></p>
+          <button class="form-intent__reset" type="button" id="formIntentReset">Ändern</button>
         </div>
-
-        <div class="quote">
-          <p><strong>Optional:</strong> Sobald du 1‑2 Kunden hast, pack hier echte Kurz‑Zitate rein (auch anonym möglich).</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section section--alt" id="faq">
-      <div class="container">
-        <div class="section__head">
-          <h2>FAQ</h2>
-          <p class="sub">Die häufigsten Fragen – kurz beantwortet.</p>
-        </div>
-
-        <div class="faq">
-          <details>
-            <summary>Ist das „nur Lektorat“?</summary>
-            <p>Nein. Ich korrigiere nicht nur Fehler, ich schärfe Stimme, Struktur und Wirkung – so dass deine Texte glaubwürdig und verkaufsfähig sind.</p>
-          </details>
-          <details>
-            <summary>Muss ich mit KI gearbeitet haben?</summary>
-            <p>Nein. Rohtexte, alte Website‑Texte oder Notizen sind genauso möglich.</p>
-          </details>
-          <details>
-            <summary>Wie schnell geht das?</summary>
-            <p>Meist 2‑5 Werktage. Quick‑Pakete oft 48–72h.</p>
-          </details>
-          <details>
-            <summary>Wie läuft die Zahlung?</summary>
-            <p>Nach Angebot. Üblich: 50% Start / 50% Delivery oder komplett vorab bei Quick‑Paketen.</p>
-          </details>
-          <details>
-            <summary>Ist das vertraulich?</summary>
-            <p>Ja. Inhalte bleiben privat. Auf Wunsch arbeite ich mit NDA.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section" id="kontakt">
-      <div class="container">
-        <div class="contact">
-          <div class="contact__copy">
-            <h2>Unverbindliche Anfrage</h2>
-            <p class="sub">
-              Schreib mir kurz, worum es geht. Ich antworte mit einer ehrlichen Einschätzung
-              und einem klaren Angebot.
-            </p>
-
-            <ul class="check">
-              <li>Link zur Seite oder Text als Copy/Paste</li>
-              <li>Was ist dein Ziel? (mehr Leads, klareres Angebot, Ton/Brand)</li>
-              <li>Welche Seiten? (Homepage, Angebot, Landingpage…)</li>
-            </ul>
-
-            <p class="tiny muted">
-              Wenn du kein Formular willst: <a href="mailto:hello@human-copy.com?subject=Anfrage%20%E2%80%94%20AI%20Human%20Copy&amp;body=Hallo,%0A%0AProjekt:%20...%0ALink%20oder%20Text:%20...%0AZiel:%20...%0AUmsfang:%20...%0ADeadline:%20...%0A%0AViele%20Gr%C3%BC%C3%9Fe,%0A...">Mail schreiben</a>
-            </p>
-          </div>
-
-          <form class="form" id="leadForm" method="POST">
+        <form class="form" id="leadForm" method="POST" action="https://formspree.io/f/mlggrbdv">
+          <input type="hidden" name="request_type" id="request_type" value="mini_audit" />
+          <input type="hidden" name="selected_package" id="selected_package" value="" />
+          <input type="hidden" name="_subject" id="subject" value="[Mini-Audit] Anfrage" />
+          <input type="hidden" name="_next" id="formNext" value="https://human-copy.com/#gesendet" />
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <div class="form__grid">
             <label>
               Name
               <input required name="name" type="text" autocomplete="name" />
             </label>
             <label>
-              E‑Mail
+              E-Mail
               <input required name="email" type="email" autocomplete="email" />
             </label>
-            <label>
-              Was brauchst du? (Link/Text + Ziel + Deadline)
-              <textarea required name="message" rows="7" placeholder="Link oder Text… Ziel… Deadline…"></textarea>
-            </label>
-
-            <label class="checkbox">
-              <input type="checkbox" name="consent" required />
-              <span>Ich stimme zu, dass meine Angaben zur Kontaktaufnahme verarbeitet werden.</span>
-            </label>
-
-            <button class="btn btn--full" type="submit">Anfrage senden</button>
-            <p class="tiny muted" id="formStatus" role="status" aria-live="polite"></p>
-          </form>
-        </div>
-
-        <footer class="footer">
-          <div class="footer__inner">
-            <p class="tiny muted">© <span id="year"></span> Human Copy · AI → Human Copy · DACH</p>
-            <div class="footer__links">
-              <a href="#" id="imprintLink">Impressum</a>
-              <a href="#" id="privacyLink">Datenschutz</a>
-            </div>
           </div>
-        </footer>
+          <label>
+            Text / Link / Kontext
+            <textarea required name="context" rows="6"></textarea>
+          </label>
+          <label>
+            Ziel (Leads / Verkauf / Klarheit)
+            <input name="goal" type="text" autocomplete="off" />
+          </label>
+          <label>
+            Deadline / Dringlichkeit (optional)
+            <input name="deadline" type="text" autocomplete="off" />
+          </label>
+          <button class="btn btn--full" type="submit" id="formSubmit" aria-label="Gratis Mini-Audit anfragen" data-default-label="Gratis Mini-Audit anfragen" data-package-label="Paket anfragen">Gratis Mini-Audit anfragen</button>
+          <div class="cta-helper" id="ctaHelper" aria-live="polite" hidden></div>
+          <p class="tiny muted">Kein Newsletter. Keine Automationen. Nur Antwort. <a class="link" href="/datenschutz.html">Datenschutz</a></p>
+          <p class="tiny muted" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="benefits">
+      <div class="container">
+        <div class="grid3">
+          <div class="card card--compact">
+            <p>Klingt nach dir – nicht nach KI.</p>
+          </div>
+          <div class="card card--compact">
+            <p>Mehr Klarheit. Weniger Blabla.</p>
+          </div>
+          <div class="card card--compact">
+            <p>Leseführung &amp; CTA, die Entscheidungen erleichtern.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="beispiele">
+      <div class="container">
+        <div class="section__head">
+          <h2>Vorher / Nachher</h2>
+        </div>
+        <div class="grid2">
+          <div class="card">
+            <h3>Beispiel 1</h3>
+            <p class="muted">Vorher: Wir bieten innovative Lösungen für Unternehmen, die ihre Prozesse optimieren und nachhaltige Ergebnisse erzielen möchten.</p>
+            <p>Nachher: Wir helfen Unternehmen, ihre Prozesse messbar zu vereinfachen – damit Entscheidungen schneller fallen und Ergebnisse sichtbar werden.</p>
+          </div>
+          <div class="card">
+            <h3>Beispiel 2</h3>
+            <p class="muted">Vorher: Unser Team unterstützt Sie bei der Implementierung moderner Strategien, die Ihre Marke stärken und das Wachstum fördern.</p>
+            <p>Nachher: Wir entwickeln klare Maßnahmen, die deine Marke sauber positionieren und Wachstum planbar machen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="trust">
+      <div class="container">
+        <div class="section__head">
+          <h2>Vertrauen &amp; Arbeitsweise</h2>
+        </div>
+        <div class="grid2">
+          <div class="card">
+            <p>Copyediting &amp; Brand Voice (DACH)</p>
+          </div>
+          <div class="card">
+            <p>Vertraulicher Umgang mit Texten</p>
+          </div>
+          <div class="card">
+            <p>Rechnung &amp; DSGVO-konform</p>
+          </div>
+          <div class="card">
+            <p>DE / EN möglich</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pakete">
+      <div class="container">
+        <div class="section__head">
+          <h2>Pakete</h2>
+          <p class="sub">Transparente Richtwerte. Exakte Preise hängen von Umfang, Komplexität und Deadline ab. Ich antworte schnell mit einem Fixpreis.</p>
+        </div>
+        <div class="packages-grid">
+          <article class="card package-card">
+            <h3>Quick Polish</h3>
+            <p class="muted">Für kurze Texte, Newsletter, Social Captions, Blog-Abschnitte.</p>
+            <p class="package-price">ab 290 €</p>
+            <p class="package-meta">bis ~600 Wörter</p>
+            <ul class="simple">
+              <li>De-AI Stil &amp; Rhythmus</li>
+              <li>Klarheit &amp; Kürzen</li>
+              <li>1 Feedbackrunde</li>
+            </ul>
+            <a class="btn btn--ghost btn--full" href="#audit" data-package="Paket A – Quick Polish">Anfragen</a>
+          </article>
+
+          <article class="card package-card package-card--highlight">
+            <div class="package-badge">Empfohlen</div>
+            <h3>Landingpage Upgrade</h3>
+            <p class="muted">Für Sales/Service Landingpages, About-Seiten, Angebotsseiten.</p>
+            <p class="package-price">typisch 450–900 €</p>
+            <p class="package-meta">1 Seite</p>
+            <ul class="simple">
+              <li>Headline-Varianten + CTA</li>
+              <li>Struktur &amp; Argumentation</li>
+              <li>Brand-Voice Feinabstimmung</li>
+              <li>2 Feedbackrunden</li>
+            </ul>
+            <a class="btn btn--full" href="#audit" data-package="Paket B – Landingpage Upgrade">Jetzt starten</a>
+          </article>
+
+          <article class="card package-card">
+            <h3>Voice System</h3>
+            <p class="muted">Für Teams/Creator: konsistente Stimme über alle Kanäle.</p>
+            <p class="package-price">ab 1.200 €</p>
+            <p class="package-meta">Setup</p>
+            <ul class="simple">
+              <li>Mini Brand-Voice Guide</li>
+              <li>Beispieltexte + Do/Don’t</li>
+              <li>Prompt-Snippets &amp; Checkliste</li>
+              <li>Feedback-Call (30 min)</li>
+            </ul>
+            <a class="btn btn--ghost btn--full" href="#audit" data-package="Paket C – Voice System" data-goal="Voice System / Call">Call anfragen</a>
+          </article>
+        </div>
+        <p class="tiny muted packages-note">Unsicher? Starte mit dem kostenlosen Mini-Audit – das ist der einfachste Weg zu einer ehrlichen Einschätzung.</p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="faq">
+      <div class="container">
+        <div class="section__head">
+          <h2>FAQ</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Wie läuft das ab?</summary>
+            <p>Du schickst Text oder Link. Ich prüfe Ton, Klarheit und Struktur und sende dir ein kurzes Audit mit Beispielabsatz.</p>
+          </details>
+          <details>
+            <summary>Wie schnell?</summary>
+            <p>Mini-Audit innerhalb von 24–48h. Projekte je nach Umfang 24–72h.</p>
+          </details>
+          <details>
+            <summary>Welche Texte bearbeitest du?</summary>
+            <p>Websites, Landingpages, Brand Copy und bestehende KI-Entwürfe.</p>
+          </details>
+          <details>
+            <summary>Bleibt mein Stil erhalten?</summary>
+            <p>Ja. Ich schärfe Rhythmus und Klarheit, ohne deine Stimme zu glätten.</p>
+          </details>
+          <details>
+            <summary>Für wen ist das nicht geeignet?</summary>
+            <p>Für Projekte mit aggressivem Verkaufston oder schneller Masse statt Substanz.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="final">
+      <div class="container">
+        <div class="final">
+          <a class="btn btn--full" href="#audit">Kostenloses Mini-Audit anfragen</a>
+          <footer class="footer">
+            <div class="footer__inner">
+              <p class="tiny muted">human-copy.com</p>
+              <div class="footer__links">
+                <a href="https://human-copy.com/impressum.html">Impressum</a>
+                <a href="https://human-copy.com/datenschutz.html">Datenschutz</a>
+                <a href="https://human-copy.com/datenschutz.html" data-consent-open>Cookie-Einstellungen</a>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="gesendet">
+      <div class="container">
+        <div class="card form-success">
+          <h2>Danke – gesendet.</h2>
+          <p class="muted">Ich melde mich persönlich per E-Mail. Kein Newsletter. Keine Automationen.</p>
+          <a class="btn btn--ghost" href="#audit">Noch eine Anfrage senden</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Modals -->
-  <dialog class="modal" id="imprintModal">
-    <div class="modal__inner">
-      <h3>Impressum</h3>
-      <p class="small">
-        Platzhalter – bitte ausfüllen (rechtlich erforderlich in DE).<br>
-        Name, Anschrift (oder Dienstleister/Impressumsservice), Kontakt, ggf. USt‑ID.
-      </p>
-      <button class="btn btn--ghost" data-close>Schließen</button>
+  <div class="consent" id="consentBanner" hidden>
+    <div class="consent__panel" role="dialog" aria-labelledby="consentTitle" aria-modal="true">
+      <div class="consent__content">
+        <h2 id="consentTitle">Cookie-Einstellungen</h2>
+        <p class="muted">Wir nutzen Cookies, um Marketing- und Statistikfunktionen erst nach deiner Einwilligung zu aktivieren. Notwendige Cookies sind immer aktiv.</p>
+      </div>
+      <div class="consent__actions">
+        <button class="btn btn--ghost" id="consentReject" type="button">Ablehnen</button>
+        <button class="btn btn--ghost" id="consentOpenSettings" type="button">Einstellungen</button>
+        <button class="btn" id="consentAcceptAll" type="button">Alle akzeptieren</button>
+      </div>
+      <div class="consent__settings" id="consentSettings" hidden>
+        <div class="consent__option">
+          <div>
+            <p><strong>Notwendig</strong></p>
+            <p class="muted">Erforderlich für den Betrieb der Website.</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked disabled />
+            <span></span>
+          </label>
+        </div>
+        <div class="consent__option">
+          <div>
+            <p><strong>Marketing</strong></p>
+            <p class="muted">Google Ads &amp; Meta Pixel.</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="consentMarketing" />
+            <span></span>
+          </label>
+        </div>
+        <div class="consent__option">
+          <div>
+            <p><strong>Statistik</strong></p>
+            <p class="muted">Google Analytics 4.</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="consentAnalytics" />
+            <span></span>
+          </label>
+        </div>
+        <div class="consent__settings-actions">
+          <button class="btn btn--ghost" id="consentClose" type="button">Schließen</button>
+          <button class="btn" id="consentSave" type="button">Auswahl speichern</button>
+        </div>
+      </div>
     </div>
-  </dialog>
-
-  <dialog class="modal" id="privacyModal">
-    <div class="modal__inner">
-      <h3>Datenschutz</h3>
-      <p class="small">
-        Platzhalter – bitte ausfüllen. Mindestens: Verantwortliche Stelle, Zweck, Speicherdauer,
-        Rechte, Kontakt. Wenn du Formspree/Analytics nutzt: erwähnen.
-      </p>
-      <button class="btn btn--ghost" data-close>Schließen</button>
-    </div>
-  </dialog>
+  </div>
 
   <script src="app.js"></script>
-  <!-- Plausible or GA4 script placeholder. To activate, paste your script below and uncomment. -->
-  <!-- <script defer data-domain="human-copy.com" src="https://plausible.io/js/script.js"></script> -->
+  <script src="assets/js/form-intent.js"></script>
+  <script src="assets/js/formspree-submit.js"></script>
+  <script src="assets/js/consent.js"></script>
 </body>
 </html>
