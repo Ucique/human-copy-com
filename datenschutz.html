@@ -6,14 +6,6 @@
       location.replace("https://" + location.host + location.pathname + location.search + location.hash);
     }
   </script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DBL2MMR17"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2DBL2MMR17');
-  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Datenschutz | Human Copy</title>
@@ -51,8 +43,11 @@
         <div class="card legal">
           <section class="legal__section">
             <h2>Verantwortliche Stelle</h2>
-            <p>Human Copy<br>
-            Kontakt: hello@human-copy.com</p>
+            <p>Charlotte Grude (Human Copy)<br>
+            Seestr. 118<br>
+            13353 Berlin<br>
+            Deutschland<br>
+            E-Mail: hello@human-copy.com</p>
           </section>
 
           <section class="legal__section">
@@ -68,15 +63,14 @@
 
           <section class="legal__section">
             <h2>Cookies &amp; Einwilligung</h2>
-            <p>Für Marketing- und Statistikzwecke werden Cookies und vergleichbare Technologien nur nach deiner Einwilligung gesetzt oder ausgelesen. Notwendige Funktionen bleiben davon unberührt. Wir setzen Google Analytics 4 nur ein, wenn eine entsprechende Einwilligung erteilt wurde bzw. sobald eine Consent-Lösung aktiv ist.</p>
+            <p>Für Statistikzwecke werden Cookies oder ähnliche Technologien nur nach deiner Einwilligung gesetzt oder ausgelesen. Notwendige Funktionen bleiben davon unberührt.</p>
           </section>
 
           <section class="legal__section">
-            <h2>Google Analytics 4</h2>
-            <p>Wir verwenden Google Analytics 4 (GA4), um die Nutzung dieser Website zu analysieren. GA4 kann Cookies oder ähnliche Identifikatoren einsetzen und erfasst Ereignisse (z. B. Seitenaufrufe). Die IP-Anonymisierung wird von Google durchgeführt. Rechtsgrundlage ist deine Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO, sofern Cookies/Identifier gesetzt werden.</p>
-            <p>Wir setzen Google Analytics 4 nur ein, wenn eine entsprechende Einwilligung erteilt wurde bzw. sobald eine Consent-Lösung aktiv ist.</p>
+            <h2>Google Analytics (nur nach Einwilligung)</h2>
+            <p>Wir verwenden Google Analytics 4, um die Nutzung der Website zu messen und zu optimieren. Die Verarbeitung erfolgt erst, nachdem du über das Consent-Banner zugestimmt hast.</p>
+            <p>Du kannst deine Einwilligung jederzeit über den Link <a href="https://human-copy.com/datenschutz.html" data-consent-open>Cookie-Einstellungen</a> widerrufen oder ändern.</p>
             <p>GA4 Measurement ID: G-2DBL2MMR17</p>
-            <p>Du kannst die Datenerfassung über deine Browser-Einstellungen oder durch ein Browser-Add-on von Google verhindern. Informationen findest du direkt bei Google (https://tools.google.com/dlpage/gaoptout).</p>
           </section>
 
           <section class="legal__section">
@@ -120,56 +114,6 @@
     </div>
   </footer>
 
-  <div class="consent" id="consentBanner" hidden>
-    <div class="consent__panel" role="dialog" aria-labelledby="consentTitle" aria-modal="true">
-      <div class="consent__content">
-        <h2 id="consentTitle">Cookie-Einstellungen</h2>
-        <p class="muted">Wir nutzen Cookies, um Marketing- und Statistikfunktionen erst nach deiner Einwilligung zu aktivieren. Notwendige Cookies sind immer aktiv.</p>
-      </div>
-      <div class="consent__actions">
-        <button class="btn btn--ghost" id="consentReject" type="button">Ablehnen</button>
-        <button class="btn btn--ghost" id="consentOpenSettings" type="button">Einstellungen</button>
-        <button class="btn" id="consentAcceptAll" type="button">Alle akzeptieren</button>
-      </div>
-      <div class="consent__settings" id="consentSettings" hidden>
-        <div class="consent__option">
-          <div>
-            <p><strong>Notwendig</strong></p>
-            <p class="muted">Erforderlich für den Betrieb der Website.</p>
-          </div>
-          <label class="switch">
-            <input type="checkbox" checked disabled />
-            <span></span>
-          </label>
-        </div>
-        <div class="consent__option">
-          <div>
-            <p><strong>Marketing</strong></p>
-            <p class="muted">Google Ads &amp; Meta Pixel.</p>
-          </div>
-          <label class="switch">
-            <input type="checkbox" id="consentMarketing" />
-            <span></span>
-          </label>
-        </div>
-        <div class="consent__option">
-          <div>
-            <p><strong>Statistik</strong></p>
-            <p class="muted">Google Analytics 4.</p>
-          </div>
-          <label class="switch">
-            <input type="checkbox" id="consentAnalytics" />
-            <span></span>
-          </label>
-        </div>
-        <div class="consent__settings-actions">
-          <button class="btn btn--ghost" id="consentClose" type="button">Schließen</button>
-          <button class="btn" id="consentSave" type="button">Auswahl speichern</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="assets/js/consent.js"></script>
+  <script defer src="assets/js/consent-analytics.js"></script>
 </body>
 </html>
