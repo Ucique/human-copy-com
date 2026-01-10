@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="de" id="top">
+<head>
+  <script>
+    if (location.protocol === "http:") {
+      location.replace("https://" + location.host + location.pathname + location.search + location.hash);
+    }
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impressum | Human Copy</title>
+  <meta name="description" content="Impressum von Human Copy." />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
+  <link rel="canonical" href="https://human-copy.com/impressum.html" />
+  <meta name="theme-color" content="#0B0B0F" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Zum Inhalt springen</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="/" aria-label="Zur Startseite">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__name">Human Copy</span>
+        <span class="brand__tag">human-copy.com</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h1>Impressum</h1>
+        </div>
+        <div class="card legal">
+          <section class="legal__section">
+            <h2>Anbieter / Anschrift</h2>
+            <p>Human Copy<br>
+            Charlotte Grude<br>
+            Seestraße 118<br>
+            13353 Berlin<br>
+            Deutschland</p>
+          </section>
+
+          <section class="legal__section">
+            <h2>Kontakt</h2>
+            <p>Kontakt:<br>
+            E-Mail: hello@human-copy.com</p>
+          </section>
+
+          <section class="legal__section">
+            <h2>Umsatzsteuer</h2>
+            <p>Umsatzsteuer:<br>
+            Gemäß § 19 UStG wird keine Umsatzsteuer erhoben (Kleinunternehmerregelung).</p>
+          </section>
+
+          <section class="legal__section">
+            <h2>Verantwortlichkeit nach MStV</h2>
+            <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:<br>
+            Charlotte Grude<br>
+            Seestraße 118<br>
+            13353 Berlin</p>
+          </section>
+
+          <section class="legal__section">
+            <h2>Haftung für Inhalte</h2>
+            <p>Haftung für Inhalte<br>
+            Als Diensteanbieterin bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.<br>
+            Nach §§ 8 bis 10 TMG bin ich jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+          </section>
+
+          <section class="legal__section">
+            <h2>Haftung für Links</h2>
+            <p>Haftung für Links<br>
+            Diese Website enthält ggf. Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe.<br>
+            Für diese fremden Inhalte wird keine Gewähr übernommen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich.</p>
+          </section>
+
+          <section class="legal__section">
+            <h2>Urheberrecht</h2>
+            <p>Urheberrecht<br>
+            Die durch die Seitenbetreiberin erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht.<br>
+            Die Vervielfältigung, Bearbeitung oder Verwertung außerhalb der Grenzen des Urheberrechts bedarf der schriftlichen Zustimmung.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="tiny muted">human-copy.com</p>
+        <div class="footer__links">
+          <a href="/impressum.html">Impressum</a>
+          <a href="/datenschutz.html">Datenschutz</a>
+          <a href="/datenschutz.html" data-consent-open>Cookie-Einstellungen</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="consent" id="consentBanner" hidden>
+    <div class="consent__panel" role="dialog" aria-labelledby="consentTitle" aria-modal="true">
+      <div class="consent__content">
+        <h2 id="consentTitle">Cookie-Einstellungen</h2>
+        <p class="muted">Wir nutzen Cookies, um Marketing- und Statistikfunktionen erst nach deiner Einwilligung zu aktivieren. Notwendige Cookies sind immer aktiv.</p>
+      </div>
+      <div class="consent__actions">
+        <button class="btn btn--ghost" id="consentReject" type="button">Ablehnen</button>
+        <button class="btn btn--ghost" id="consentOpenSettings" type="button">Einstellungen</button>
+        <button class="btn" id="consentAcceptAll" type="button">Alle akzeptieren</button>
+      </div>
+      <div class="consent__settings" id="consentSettings" hidden>
+        <div class="consent__option">
+          <div>
+            <p><strong>Notwendig</strong></p>
+            <p class="muted">Erforderlich für den Betrieb der Website.</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked disabled />
+            <span></span>
+          </label>
+        </div>
+        <div class="consent__option">
+          <div>
+            <p><strong>Marketing</strong></p>
+            <p class="muted">Google Ads &amp; Meta Pixel.</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="consentMarketing" />
+            <span></span>
+          </label>
+        </div>
+        <div class="consent__option">
+          <div>
+            <p><strong>Statistik</strong></p>
+            <p class="muted">Google Analytics 4.</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="consentAnalytics" />
+            <span></span>
+          </label>
+        </div>
+        <div class="consent__settings-actions">
+          <button class="btn btn--ghost" id="consentClose" type="button">Schließen</button>
+          <button class="btn" id="consentSave" type="button">Auswahl speichern</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/consent.js"></script>
+</body>
+</html>
