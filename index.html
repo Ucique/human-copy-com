@@ -35,7 +35,7 @@
         <span class="brand__name">Human Copy</span>
         <span class="brand__tag">human-copy.com</span>
       </a>
-      <a class="btn btn--small" href="#audit">Kostenloses Mini-Audit anfragen</a>
+      <a class="btn btn--small" href="#audit">Mini-Audit anfragen</a>
     </div>
   </header>
 
@@ -50,7 +50,7 @@
           </div>
         </div>
         <div class="hero__cta">
-          <a class="btn btn--full" href="#audit">Kostenloses Mini-Audit anfragen</a>
+          <a class="btn btn--full" href="#audit">Mini-Audit anfragen</a>
           <p class="tiny muted trust-line">300–600 Wörter oder Link · ehrliches Feedback + überarbeiteter Beispielabsatz · kein Newsletter.</p>
           <a class="link" href="#beispiele">Vorher/Nachher ansehen</a>
           <p class="micro">Kein Umschreiben. Kein Marketing-Lärm. Handwerk.</p>
@@ -58,49 +58,76 @@
       </div>
     </section>
 
+    <section class="hc-trust" aria-label="Über mich">
+      <div class="container">
+        <div class="hc-trust__inner">
+          <div class="hc-trust__media"></div>
+          <div class="hc-trust__text">
+            <p class="hc-trust__snippet">
+              Ich bin Charlotte. Ich schneide Texte auf Wirkung – nicht auf Höflichkeit.
+            </p>
+            <details class="hc-trust__more">
+              <summary>…</summary>
+              <p>
+                Ich arbeite nicht mit Templates. Ich arbeite am Satz.
+                Du bekommst klare Korrektur, saubere Entscheidungen und eine Version,
+                die man wirklich liest.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="audit">
       <div class="container">
         <div class="section__head">
-          <h2>Kostenloses Mini-Audit</h2>
+          <h2>Mini-Audit</h2>
           <p class="sub">Schick mir Text oder Link. Du bekommst innerhalb von 24–48h klares Feedback + einen überarbeiteten Beispielabsatz.</p>
         </div>
         <div class="form-intent" id="formIntent" hidden>
           <p class="form-intent__text" id="formIntentText"></p>
           <button class="form-intent__reset" type="button" id="formIntentReset">Ändern</button>
         </div>
-        <form class="form" id="leadForm" method="POST" action="https://formspree.io/f/mlggrbdv">
-          <input type="hidden" name="request_type" id="request_type" value="mini_audit" />
-          <input type="hidden" name="selected_package" id="selected_package" value="" />
-          <input type="hidden" name="_subject" id="subject" value="[Mini-Audit] Anfrage" />
-          <input type="hidden" name="_next" id="formNext" value="https://human-copy.com/#gesendet" />
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-          <div class="form__grid">
+        <details class="hc-lead" id="mini-audit">
+          <summary class="hc-lead__summary">
+            <span class="btn btn--full hc-lead__btn">Mini-Audit starten</span>
+          </summary>
+          <form class="form hc-lead__form" id="leadForm" method="POST" action="https://formspree.io/f/mlggrbdv">
+            <input type="hidden" name="request_type" id="request_type" value="mini_audit" />
+            <input type="hidden" name="selected_package" id="selected_package" value="" />
+            <input type="hidden" name="_subject" id="subject" value="[Mini-Audit] Anfrage" />
+            <input type="hidden" name="_next" id="formNext" value="https://human-copy.com/#gesendet" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <div class="form__grid">
+              <label>
+                Name
+                <input required name="name" type="text" autocomplete="name" />
+              </label>
+              <label>
+                E-Mail
+                <input required name="email" type="email" autocomplete="email" />
+              </label>
+            </div>
             <label>
-              Name
-              <input required name="name" type="text" autocomplete="name" />
+              Text / Link / Kontext
+              <textarea required name="context" rows="6"></textarea>
             </label>
             <label>
-              E-Mail
-              <input required name="email" type="email" autocomplete="email" />
+              Ziel (Leads / Verkauf / Klarheit)
+              <input name="goal" type="text" autocomplete="off" />
             </label>
-          </div>
-          <label>
-            Text / Link / Kontext
-            <textarea required name="context" rows="6"></textarea>
-          </label>
-          <label>
-            Ziel (Leads / Verkauf / Klarheit)
-            <input name="goal" type="text" autocomplete="off" />
-          </label>
-          <label>
-            Deadline / Dringlichkeit (optional)
-            <input name="deadline" type="text" autocomplete="off" />
-          </label>
-          <button class="btn btn--full" type="submit" id="formSubmit" aria-label="Gratis Mini-Audit anfragen" data-default-label="Gratis Mini-Audit anfragen" data-package-label="Paket anfragen">Gratis Mini-Audit anfragen</button>
-          <div class="cta-helper" id="ctaHelper" aria-live="polite" hidden></div>
-          <p class="tiny muted">Kein Newsletter. Keine Automationen. Nur Antwort. <a class="link" href="/datenschutz.html">Datenschutz</a></p>
-          <p class="tiny muted" id="formStatus" role="status" aria-live="polite"></p>
-        </form>
+            <label>
+              Deadline / Dringlichkeit (optional)
+              <input name="deadline" type="text" autocomplete="off" />
+            </label>
+            <button class="btn btn--full" type="submit" id="formSubmit" aria-label="Mini-Audit anfragen" data-default-label="Mini-Audit anfragen" data-package-label="Paket anfragen">Mini-Audit anfragen</button>
+            <div class="cta-helper" id="ctaHelper" aria-live="polite" hidden></div>
+            <p class="hc-lead__micro">Kein Newsletter. Nur Antwort.</p>
+            <p class="tiny muted">Kein Newsletter. Keine Automationen. Nur Antwort. <a class="link" href="/datenschutz.html">Datenschutz</a></p>
+            <p class="tiny muted" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </details>
       </div>
     </section>
 
@@ -239,13 +266,9 @@
     </section>
     <section class="hc-cta-bridge" aria-label="CTA nach Vorher Nachher">
       <div class="hc-cta-bridge__inner">
-        <h3 class="hc-cta-bridge__title">KI-Text humanisieren? Einmal prüfen lassen.</h3>
-        <p class="hc-cta-bridge__sub">
-          Text oder Link reicht. Du bekommst einen Beispielabsatz zurück.
-        </p>
-
+        <h3 class="hc-cta-bridge__title">KI-Text humanisieren? Dann jetzt.</h3>
         <div class="hc-cta-bridge__actions">
-          <a class="btn btn--full" href="#audit">Mini-Audit starten</a>
+          <a class="btn btn--full hc-cta-bridge__btn" href="#audit">Mini-Audit</a>
           <a class="hc-cta-bridge__link" href="#pakete">Pakete →</a>
         </div>
       </div>
@@ -343,7 +366,7 @@
             <a class="btn btn--ghost btn--full" href="#audit" data-package="Paket C – Voice System" data-goal="Voice System / Call">Call anfragen</a>
           </article>
         </div>
-        <p class="tiny muted packages-note">Unsicher? Starte mit dem kostenlosen Mini-Audit – das ist der einfachste Weg zu einer ehrlichen Einschätzung.</p>
+        <p class="tiny muted packages-note">Unsicher? Starte mit dem Mini-Audit – das ist der einfachste Weg zu einer ehrlichen Einschätzung.</p>
       </div>
     </section>
 
@@ -380,7 +403,7 @@
     <section class="section" id="final">
       <div class="container">
         <div class="final">
-          <a class="btn btn--full" href="#audit">Kostenloses Mini-Audit anfragen</a>
+          <a class="btn btn--full" href="#audit">Mini-Audit anfragen</a>
           <footer class="footer">
             <div class="footer__inner">
               <p class="tiny muted">human-copy.com</p>
