@@ -748,7 +748,7 @@ h1 {
 .hc-cta-bridge__sub{
   margin: 0 0 14px 0;
   opacity: 0.85;
-  max-width: 70ch;
+  max-width: 56ch;
   line-height: 1.5;
 }
 
@@ -770,12 +770,6 @@ h1 {
 .hc-cta-bridge__link:hover{
   opacity: 1;
   border-bottom-color: color-mix(in srgb, var(--hc-accent) 55%, rgba(255,255,255,0.28));
-}
-
-.hc-cta-bridge__fineprint{
-  margin: 12px 0 0 0;
-  font-size: 14px;
-  opacity: 0.72;
 }
 
 @media (max-width: 900px){
