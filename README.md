@@ -69,4 +69,4 @@ For German websites you must include a valid **Impressum** and **Datenschutzerkl
 
 ---
 
-This project is maintained by Charlotte for the **AI → Human Copy** service.
+This project is maintained for the **AI → Human Copy** service.

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://human-copy.com/sitemap.xml
