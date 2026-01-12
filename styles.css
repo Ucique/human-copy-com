@@ -122,6 +122,9 @@ body::before {
     radial-gradient(1200px 800px at 15% 20%, rgba(26, 91, 89, 0.22), transparent 60%),
     radial-gradient(900px 700px at 85% 35%, rgba(255, 122, 102, 0.10), transparent 55%),
     radial-gradient(1100px 900px at 45% 85%, rgba(40, 40, 44, 0.18), transparent 60%),
+    radial-gradient(360px 320px at 18% 78%, rgba(230, 92, 70, 0.14), transparent 62%),
+    radial-gradient(300px 300px at 82% 52%, rgba(230, 92, 70, 0.12), transparent 60%),
+    radial-gradient(280px 260px at 55% 12%, rgba(230, 92, 70, 0.10), transparent 58%),
     linear-gradient(180deg, #F7F3EF 0%, #F2ECE6 30%, #EFE8E2 55%, #F7F3EF 100%);
   filter: saturate(1.05) contrast(1.02);
   transform: translateZ(0);
