@@ -1026,9 +1026,18 @@ h1 {
 }
 
 .hc-about{
-  margin-top: 28px;
-  padding-top: 22px;
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  float: none !important;
+  width: auto !important;
+  margin: 28px 0 0 0;
+  padding: 22px 0 0 0;
   border-top: 1px solid rgba(26,29,31,.10);
+  background: transparent;
 }
 
 .hc-about__inner{
@@ -1036,8 +1045,6 @@ h1 {
   grid-template-columns: 72px 1fr;
   gap: 16px;
   align-items: start;
-  max-width: 980px;
-  margin: 0 auto;
 }
 
 .hc-about__avatar{
@@ -1082,14 +1089,6 @@ h1 {
 
 .hc-about__body p{
   margin: 0 0 10px 0;
-}
-
-.hc-trust{
-  position: static !important;
-}
-
-.hc-trust__inner{
-  position: static !important;
 }
 
 @media (max-width: 720px){
