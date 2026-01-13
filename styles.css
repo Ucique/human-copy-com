@@ -1163,6 +1163,11 @@ h1 {
   }
 }
 
+@media (max-width: 900px){
+  .hc-example__grid{ grid-template-columns: 1fr; }
+  .hc-arrow{ display:none; }
+}
+
 @media (max-width: 720px){
   .hc-trust__inner{ grid-template-columns: 52px 1fr; }
   .hc-trust__avatar{
