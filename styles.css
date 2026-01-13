@@ -5,14 +5,32 @@
 */
 
 :root {
+  /* Hintergrund */
+  --bg-primary: #F7FAFC;
+  --bg-secondary: #EDF2F7;
+
+  /* Text */
+  --text-primary: #2D3748;
+  --text-muted: #4A5568;
+
+  /* Handlung / Eingriff */
+  --accent-primary: #2B6CB0;
+  --accent-hover: #1E4E8C;
+
+  /* Neutral */
+  --white: #FFFFFF;
+
+  /* Rahmen & Trennung */
+  --border-light: #E2E8F0;
+
   /* Base colours */
-  --hc-bg: #F6F5F3;
-  --hc-bg-2: #F1F0EE;
-  --hc-card-bg: rgba(255,255,255,0.72);
-  --hc-card-bg-strong: rgba(255,255,255,0.86);
-  --hc-card-border: rgba(20,20,25,0.08);
-  --hc-card-shadow: 0 12px 30px rgba(10, 12, 16, 0.10);
-  --hc-card-shadow-hover: 0 18px 45px rgba(10, 12, 16, 0.16);
+  --hc-bg: var(--bg-primary);
+  --hc-bg-2: var(--bg-secondary);
+  --hc-card-bg: var(--bg-secondary);
+  --hc-card-bg-strong: var(--white);
+  --hc-card-border: var(--border-light);
+  --hc-card-shadow: 0 12px 30px rgba(45, 55, 72, 0.10);
+  --hc-card-shadow-hover: 0 18px 45px rgba(45, 55, 72, 0.16);
   --hc-card-radius: 16px;
   --hc-coral-tint: rgba(160, 90, 100, 0.06);
   --hc-coral-tint-2: rgba(160, 90, 100, 0.03);
@@ -21,15 +39,15 @@
   --hc-featured-muted: rgba(242, 239, 233, 0.80);
   --hc-featured-border: rgba(255,255,255,0.10);
   --bg: var(--hc-bg);
-  --panel: #ffffff;
+  --panel: var(--white);
   --panel-alt: var(--hc-bg-2);
-  --text: #17181b;
-  --muted: #5a5f69;
-  --line: rgba(23,24,27,0.08);
-  --accent: var(--coral);
-  --accent-alt: var(--coral2);
+  --text: var(--text-primary);
+  --muted: var(--text-muted);
+  --line: var(--border-light);
+  --accent: var(--accent-primary);
+  --accent-alt: var(--accent-hover);
   --shadow: var(--hc-card-shadow);
-  --header-bg: rgba(246, 245, 243, 0.92);
+  --header-bg: rgba(247, 250, 252, 0.92);
   --card-bg: var(--hc-card-bg);
   --panel-bg: var(--hc-bg-2);
   --radius: 18px;
@@ -43,16 +61,16 @@
   --featured-muted: rgba(242, 237, 230, 0.72);
 
   /* Light theme base */
-  --hc-text: #111111;
-  --hc-text-muted: #5a5f69;
+  --hc-text: var(--text-primary);
+  --hc-text-muted: var(--text-muted);
   --hc-muted: var(--hc-text-muted);
   --hc-surface: var(--hc-card-bg);
   --hc-surface-2: var(--hc-bg-2);
   --hc-border: var(--hc-card-border);
   --hc-border-2: rgba(15, 18, 20, 0.12);
-  --hc-cta: #2b8f8a;
-  --hc-cta-hover: #277C78;
-  --hc-coral: var(--accent-coral);
+  --hc-cta: var(--accent-primary);
+  --hc-cta-hover: var(--accent-hover);
+  --hc-coral: #ff6b5a;
   --hc-accent: var(--hc-cta);
   --hc-shadow: var(--hc-card-shadow);
   --hc-shadow-2: var(--hc-card-shadow);
@@ -105,8 +123,8 @@ body {
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   position: relative;
   min-height: 100%;
-  background: transparent;
-  color: var(--hc-text);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   line-height: 1.5;
   overflow-x: hidden;
 }
@@ -138,12 +156,12 @@ body::before {
 }
 
 a {
-  color: var(--hc-text);
+  color: var(--accent-primary);
   text-decoration: none;
   text-underline-offset: 3px;
 }
 a:hover {
-  color: var(--hc-cta);
+  color: var(--accent-hover);
 }
 
 /* Container */
@@ -249,8 +267,8 @@ h1 {
   gap: 10px;
 }
 .profileCardHero{
-  background: var(--hc-card-bg-strong);
-  border: 1px solid var(--hc-card-border);
+  background: var(--white);
+  border: 1px solid var(--border-light);
   border-radius: var(--hc-card-radius);
   box-shadow: var(--hc-card-shadow);
   padding: 22px;
@@ -302,7 +320,7 @@ h1 {
   padding: 12px 16px;
   border-radius: 14px;
   border: 1px solid transparent;
-  background: var(--hc-cta);
+  background: var(--accent-primary);
   color: #fff;
   font-weight: 600;
   text-decoration: none;
@@ -312,7 +330,7 @@ h1 {
 }
 .btn:hover {
   filter: none;
-  background: var(--hc-cta-hover);
+  background: var(--accent-hover);
 }
 .btn--ghost {
   background: transparent;
@@ -336,8 +354,8 @@ h1 {
 .price,
 .audit,
 .quote {
-  background: var(--hc-card-bg);
-  border: 1px solid var(--hc-card-border);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
   border-radius: var(--hc-card-radius);
   box-shadow: var(--hc-card-shadow);
   backdrop-filter: blur(10px);
@@ -360,17 +378,17 @@ h1 {
   padding: 46px 0;
 }
 .section--alt {
-  background: rgba(255,255,255,0.40);
-  border-top: 1px solid rgba(20,20,25,0.04);
-  border-bottom: 1px solid rgba(20,20,25,0.04);
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
 .section#pakete,
 .section#faq {
-  background: rgba(255,255,255,0.40);
-  border-top: 1px solid rgba(20,20,25,0.04);
-  border-bottom: 1px solid rgba(20,20,25,0.04);
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
@@ -543,9 +561,9 @@ h1 {
 .note {
   margin-top: 16px;
   padding: 14px 16px;
-  border: 1px solid var(--hc-card-border);
+  border: 1px solid var(--border-light);
   border-radius: 14px;
-  background: var(--hc-card-bg);
+  background: var(--bg-secondary);
   box-shadow: var(--hc-card-shadow);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -554,9 +572,9 @@ h1 {
 
 /* FAQ */
 .faq details {
-  border: 1px solid var(--hc-card-border);
+  border: 1px solid var(--border-light);
   border-radius: 16px;
-  background: var(--hc-card-bg);
+  background: var(--bg-secondary);
   box-shadow: var(--hc-card-shadow);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -778,8 +796,8 @@ h1 {
 }
 
 .hc-card{
-  background: var(--hc-card-bg);
-  border: 1px solid var(--hc-card-border);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
   border-radius: var(--hc-card-radius);
   box-shadow: var(--hc-card-shadow);
   backdrop-filter: blur(10px);
@@ -929,8 +947,8 @@ h1 {
 }
 
 .hc-panel{
-  background: var(--hc-card-bg);
-  border: 1px solid var(--hc-card-border);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
   border-radius: var(--hc-card-radius);
   box-shadow: var(--hc-card-shadow);
   backdrop-filter: blur(10px);
