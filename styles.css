@@ -37,7 +37,10 @@
   --ink: #17181b;
   --card: #ffffff;
   --teal: #2b8f8a;
-  --coral: #ff6b5a;
+  --coral: var(--accent-coral);
+  --featured-bg: #2c2d31;
+  --featured-text: #f2ede6;
+  --featured-muted: rgba(242, 237, 230, 0.72);
 
   /* Light theme base */
   --hc-text: #111111;
@@ -49,7 +52,7 @@
   --hc-border-2: rgba(15, 18, 20, 0.12);
   --hc-cta: #2b8f8a;
   --hc-cta-hover: #277C78;
-  --hc-coral: #ff6b5a;
+  --hc-coral: var(--accent-coral);
   --hc-accent: var(--hc-cta);
   --hc-shadow: var(--hc-card-shadow);
   --hc-shadow-2: var(--hc-card-shadow);
