@@ -146,6 +146,7 @@ body{
 .hero-left{
   display: grid;
   gap: 16px;
+  align-items: center;
 }
 
 .hero-title{
@@ -177,6 +178,11 @@ body{
   box-shadow: var(--shadow-soft);
   font-size: clamp(14px, 2vw, 16px);
   line-height: 1.6;
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .profile-card{
@@ -184,6 +190,14 @@ body{
   width: 100%;
   padding: 16px;
   text-align: center;
+  box-sizing: border-box;
+}
+
+.profile-card img{
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .profile-card img{
@@ -352,6 +366,12 @@ body{
   display: grid;
   gap: 14px;
   max-width: 640px;
+}
+
+@media (min-width: 900px){
+  .form-card{
+    padding-bottom: 32px;
+  }
 }
 
 .form-card form{
