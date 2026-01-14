@@ -713,6 +713,14 @@ p{
     grid-template-columns: 1fr;
   }
 
+  .hero-right{
+    order: 1;
+  }
+
+  .hero-left{
+    order: 2;
+  }
+
   .steps-grid .step-card{
     grid-column: span 6;
   }
