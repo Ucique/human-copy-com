@@ -125,18 +125,22 @@ body{
 }
 
 .hero{
-  min-height: min(78vh, 720px);
+  min-height: min(76vh, 720px);
   display: flex;
   align-items: center;
-  padding-top: clamp(14px, 2.5vh, 36px);
+  padding-top: clamp(10px, 2vh, 28px);
   padding-bottom: clamp(24px, 4vh, 56px);
 }
 
 .hero-grid{
   display: grid;
-  grid-template-columns: minmax(240px, 360px) minmax(0, 1fr);
+  grid-template-columns: 1.1fr 0.9fr;
   gap: clamp(18px, 4vw, 36px);
   align-items: start;
+}
+
+.hero-main{
+  justify-self: start;
 }
 
 .hero-left{
@@ -338,6 +342,7 @@ body{
 .form-card{
   display: grid;
   gap: 14px;
+  max-width: 640px;
 }
 
 .form-card form{
@@ -417,6 +422,12 @@ body{
   margin: 0;
   font-size: 13px;
   color: rgba(255,255,255,0.75);
+}
+
+.form-meta{
+  margin: 0;
+  font-size: 12px;
+  color: rgba(255,255,255,0.72);
 }
 
 .form-card .cta{
@@ -713,11 +724,11 @@ p{
     grid-template-columns: 1fr;
   }
 
-  .hero-right{
+  .hero-main{
     order: 1;
   }
 
-  .hero-left{
+  .hero-side{
     order: 2;
   }
 
