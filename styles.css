@@ -8,6 +8,7 @@
   --shadow-soft: 0 12px 36px rgba(6,10,16,0.35);
   --radius: 20px;
   --max: 1140px;
+  --side-card-width: 360px;
   --cta: #2f5e8e;
   --cta-hover: #284f78;
   --cta-active: #214362;
@@ -134,7 +135,7 @@ body{
 
 .hero-grid{
   display: grid;
-  grid-template-columns: 1fr 420px;
+  grid-template-columns: 1fr var(--side-card-width);
   gap: clamp(18px, 4vw, 36px);
   align-items: start;
 }
@@ -146,7 +147,13 @@ body{
 .hero-left{
   display: grid;
   gap: 16px;
+}
+
+.hero-side{
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 16px;
 }
 
 .hero-title{
@@ -178,11 +185,6 @@ body{
   box-shadow: var(--shadow-soft);
   font-size: clamp(14px, 2vw, 16px);
   line-height: 1.6;
-  max-width: 360px;
-  width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
-  overflow: hidden;
 }
 
 .profile-card{
@@ -198,6 +200,23 @@ body{
   height: auto;
   max-width: 100%;
   object-fit: cover;
+}
+
+.profile-card img{
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.profile-card,
+.left-proof{
+  width: min(100%, var(--side-card-width));
+  max-width: var(--side-card-width);
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
 }
 
 .profile-card img{
@@ -370,7 +389,7 @@ body{
 
 @media (min-width: 900px){
   .form-card{
-    padding-bottom: 32px;
+    padding-bottom: 48px;
   }
 }
 
