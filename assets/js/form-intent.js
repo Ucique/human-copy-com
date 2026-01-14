@@ -11,7 +11,7 @@
   const subjectInput = document.getElementById('subject');
   const submitButton = document.getElementById('formSubmit');
   const helper = document.getElementById('ctaHelper');
-  const defaultLabel = submitButton?.getAttribute('data-default-label') || 'Text einreichen';
+  const defaultLabel = submitButton?.getAttribute('data-default-label') || 'Gratis Mini-Audit anfragen';
   const packageLabel = submitButton?.getAttribute('data-package-label') || 'Paket anfragen';
 
   const intentBox = document.getElementById('formIntent');
@@ -82,8 +82,8 @@
       if (subjectInput) subjectInput.value = buildSubject('package', packageName);
       if (form) {
         form.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        const firstField = form.querySelector('textarea, input, select');
-        if (firstField) firstField.focus({ preventScroll: true });
+        const nameField = form.querySelector('input[name="name"]');
+        if (nameField) nameField.focus({ preventScroll: true });
       }
     });
   });
