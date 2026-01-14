@@ -15,12 +15,29 @@
   <div class="page">
     <header class="site-header hero" id="top">
       <div class="container">
-        <div class="card hero-card">
-          <h1 class="hero-title">Texte, die nach dir klingen.<br><span class="hero-title-2">Nicht nach KI</span></h1>
-          <p class="hero-sub">
-            Als Copywriterin überarbeite ich KI-Entwürfe für Landingpages, Blogs und Brand Copy –
-            dort, wo Wirkung entscheidender ist als bloße Erklärung. DACH • DE/EN • 24–48h
-          </p>
+        <div class="hero-grid">
+          <div class="card profile-card reveal">
+            <img class="profile-image" src="assets/img/charlotte.jpg" alt="Portrait von Carlotte" />
+            <p class="profile-copy">
+              Hey, ich bin Carlotte<br>
+              Ich bin Copywriterin und texterin<br>
+              mit über 3 Jahren Erfahrung im Onlinemarketing.<br>
+              Ich verbinde Menschen mit Worten und unterstütze dich dabei,<br>
+              aus deinen Website-Besuchern zahlende Kunden zu machen.
+            </p>
+          </div>
+
+          <div class="card hero-card">
+            <h1 class="hero-title">Texte, die nach dir klingen.<br><span class="hero-title-2">Nicht nach KI</span></h1>
+            <p class="hero-sub">
+              Als Copywriterin überarbeite ich KI-Entwürfe für Landingpages, Blogs und Brand Copy –
+              dort, wo Wirkung entscheidender ist als bloße Erklärung. DACH • DE/EN • 24–48h
+            </p>
+            <div class="hero-actions">
+              <a class="cta cta-primary" href="#mini-audit">Kostenloses Mini-Audit</a>
+              <a class="cta cta-secondary" href="#pakete">Pakete ansehen</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -45,6 +62,101 @@
                 <p>Klarer. Menschlicher. Mit Kante. Nicht geschniegelt. Sondern lesbar.</p>
               </article>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="card section-card cta-strip reveal">
+            <p>Wenn du willst, dass dein Text trägt:</p>
+            <a class="cta cta-primary" href="#mini-audit">Kostenloses Mini-Audit</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pakete">
+        <div class="container">
+          <div class="card section-card">
+            <div class="packages-grid">
+              <article class="package-card reveal">
+                <h2>Quick Polish</h2>
+                <p>Für kurze Texte, Newsletter, Social Captions, Blog-Abschnitte.</p>
+                <p class="price">ab 290 €</p>
+                <p class="detail">bis ~600 Wörter</p>
+                <ul>
+                  <li>De-AI Stil & Rhythmus</li>
+                  <li>Klarheit & Kürzen</li>
+                  <li>1 Feedbackrunde</li>
+                </ul>
+                <a class="cta cta-secondary" href="#mini-audit">Anfragen</a>
+              </article>
+
+              <article class="package-card featured reveal">
+                <span class="badge">Empfohlen</span>
+                <h2>Landingpage Upgrade</h2>
+                <p>Für Sales/Service Landingpages, About-Seiten, Angebotsseiten.</p>
+                <p class="price">typisch 450–900 €</p>
+                <ul>
+                  <li>1 Seite</li>
+                  <li>Headline-Varianten + CTA</li>
+                  <li>Struktur & Argumentation</li>
+                  <li>Brand-Voice Feinabstimmung</li>
+                  <li>2 Feedbackrunden</li>
+                </ul>
+                <a class="cta cta-primary" href="#mini-audit">Jetzt starten</a>
+              </article>
+
+              <article class="package-card reveal">
+                <h2>Voice System</h2>
+                <p>Für Teams/Creator: konsistente Stimme über alle Kanäle.</p>
+                <p class="price">ab 1.200 €</p>
+                <ul>
+                  <li>Setup</li>
+                  <li>Mini Brand-Voice Guide</li>
+                  <li>Beispieltexte + Do/Don't</li>
+                  <li>Prompt-Snippets & Checkliste</li>
+                  <li>Feedback-Call (30 min)</li>
+                </ul>
+                <a class="cta cta-secondary" href="#mini-audit">Call anfragen</a>
+              </article>
+            </div>
+            <p class="packages-note">Unsicher? Starte mit dem Mini-Audit – das ist der einfachste Weg zu einer ehrlichen Einschätzung.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="mini-audit">
+        <div class="container">
+          <div class="card section-card">
+            <h2>Kostenloses Mini-Audit</h2>
+            <p>Schick mir deinen Entwurf und ich gebe dir eine klare Einschätzung, wo dein Text trägt und wo er stolpert.</p>
+            <form class="form-card" action="__REPLACE_WITH_FORM_ENDPOINT__" method="POST">
+              <!-- TODO: Replace action with your form endpoint -->
+              <div class="form-grid">
+                <label class="form-field">
+                  <span>Name (optional)</span>
+                  <input type="text" name="name" autocomplete="name" />
+                </label>
+                <label class="form-field">
+                  <span>E-Mail</span>
+                  <input type="email" name="email" autocomplete="email" required />
+                </label>
+                <label class="form-field">
+                  <span>Website/Link (optional)</span>
+                  <input type="url" name="website" placeholder="https://..." />
+                </label>
+              </div>
+              <label class="form-field">
+                <span>Text/Entwurf (optional)</span>
+                <textarea name="draft" rows="7"></textarea>
+              </label>
+              <label class="form-check">
+                <input type="checkbox" name="consent" required />
+                <span>Ich stimme zu, dass meine Angaben zur Kontaktaufnahme gespeichert werden.</span>
+              </label>
+              <button class="cta cta-primary" type="submit">Mini-Audit anfragen</button>
+            </form>
           </div>
         </div>
       </section>
