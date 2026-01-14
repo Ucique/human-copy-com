@@ -66,6 +66,47 @@
         </div>
       </section>
 
+      <section class="section" id="ablauf">
+        <div class="container">
+          <div class="card section-card">
+            <h2>Wie es abläuft:</h2>
+            <div class="steps-grid">
+              <article class="step-card reveal">
+                <span class="step-badge">1</span>
+                <p>
+                  Du sendest mir deinen Text.<br>
+                  Landingpage, Blog/Artikel oder Entwurf. Keine Präsentation.<br>
+                  Keine Verschönerung. In seinem aktuellen Zustand.
+                </p>
+              </article>
+              <article class="step-card reveal">
+                <span class="step-badge">2</span>
+                <p>
+                  Ich lese und bilde mir ein Urteil.<br>
+                  Ohne Regeln. Nach Effekt.<br>
+                  In welchem Bereich setzt der Text an?<br>
+                  Wo zieht er sich zurück?<br>
+                  Wo ist er korrekt, aber bleibt dennoch leer?
+                </p>
+              </article>
+              <article class="step-card reveal">
+                <span class="step-badge">3</span>
+                <p>
+                  Du erhältst eindeutiges Feedback.<br>
+                  In Kürze. Unmittelbar. Ersichtlich.<br>
+                  Was klappt.<br>
+                  Was dir Schwäche verleiht.<br>
+                  Und wo du anfangen musst, wenn der Text nicht nur erklären,<br>
+                  sondern etwas bewirken soll.<br>
+                  Keine Verkaufsgespräch.<br>
+                  Keine Tool-Dokumentation.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section">
         <div class="container">
           <div class="card section-card cta-strip reveal">
@@ -89,7 +130,7 @@
                   <li>Klarheit & Kürzen</li>
                   <li>1 Feedbackrunde</li>
                 </ul>
-                <a class="cta cta-secondary" href="#mini-audit">Anfragen</a>
+                <a class="cta cta-secondary" href="#mini-audit" data-package="Paket A – Quick Polish">Anfragen</a>
               </article>
 
               <article class="package-card featured reveal">
@@ -104,7 +145,7 @@
                   <li>Brand-Voice Feinabstimmung</li>
                   <li>2 Feedbackrunden</li>
                 </ul>
-                <a class="cta cta-primary" href="#mini-audit">Jetzt starten</a>
+                <a class="cta cta-primary" href="#mini-audit" data-package="Paket B – Landingpage Upgrade">Jetzt starten</a>
               </article>
 
               <article class="package-card reveal">
@@ -118,7 +159,7 @@
                   <li>Prompt-Snippets & Checkliste</li>
                   <li>Feedback-Call (30 min)</li>
                 </ul>
-                <a class="cta cta-secondary" href="#mini-audit">Call anfragen</a>
+                <a class="cta cta-secondary" href="#mini-audit" data-package="Paket C – Voice System">Call anfragen</a>
               </article>
             </div>
             <p class="packages-note">Unsicher? Starte mit dem Mini-Audit – das ist der einfachste Weg zu einer ehrlichen Einschätzung.</p>
@@ -131,31 +172,43 @@
           <div class="card section-card">
             <h2>Kostenloses Mini-Audit</h2>
             <p>Schick mir deinen Entwurf und ich gebe dir eine klare Einschätzung, wo dein Text trägt und wo er stolpert.</p>
-            <form class="form-card" action="__REPLACE_WITH_FORM_ENDPOINT__" method="POST">
-              <!-- TODO: Replace action with your form endpoint -->
+            <div class="form-intent" id="formIntent" hidden>
+              <p class="form-intent__text" id="formIntentText"></p>
+              <button class="form-intent__reset" type="button" id="formIntentReset">Ändern</button>
+            </div>
+            <form class="form-card" id="leadForm" method="POST" action="https://formspree.io/f/mlggrbdv">
+              <input type="hidden" name="request_type" id="request_type" value="mini_audit" />
+              <input type="hidden" name="selected_package" id="selected_package" value="" />
+              <input type="hidden" name="_subject" id="subject" value="[Mini-Audit] Anfrage" />
+              <input type="hidden" name="_next" id="formNext" value="https://human-copy.com/#gesendet" />
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
               <div class="form-grid">
                 <label class="form-field">
-                  <span>Name (optional)</span>
-                  <input type="text" name="name" autocomplete="name" />
+                  <span>Name</span>
+                  <input required name="name" type="text" autocomplete="name" />
                 </label>
                 <label class="form-field">
                   <span>E-Mail</span>
-                  <input type="email" name="email" autocomplete="email" required />
-                </label>
-                <label class="form-field">
-                  <span>Website/Link (optional)</span>
-                  <input type="url" name="website" placeholder="https://..." />
+                  <input required name="email" type="email" autocomplete="email" />
                 </label>
               </div>
               <label class="form-field">
-                <span>Text/Entwurf (optional)</span>
-                <textarea name="draft" rows="7"></textarea>
+                <span>Text / Link / Kontext</span>
+                <textarea required name="context" rows="6"></textarea>
               </label>
-              <label class="form-check">
-                <input type="checkbox" name="consent" required />
-                <span>Ich stimme zu, dass meine Angaben zur Kontaktaufnahme gespeichert werden.</span>
+              <label class="form-field">
+                <span>Ziel (Leads / Verkauf / Klarheit)</span>
+                <input name="goal" type="text" autocomplete="off" />
               </label>
-              <button class="cta cta-primary" type="submit">Mini-Audit anfragen</button>
+              <label class="form-field">
+                <span>Deadline / Dringlichkeit (optional)</span>
+                <input name="deadline" type="text" autocomplete="off" />
+              </label>
+              <button class="cta cta-primary" type="submit" id="formSubmit" aria-label="Mini-Audit anfragen" data-default-label="Mini-Audit anfragen" data-package-label="Paket anfragen">Mini-Audit anfragen</button>
+              <div class="cta-helper" id="ctaHelper" aria-live="polite" hidden></div>
+              <p class="form-note">Kein Newsletter. Nur Antwort.</p>
+              <p class="form-note muted">Kein Newsletter. Keine Automationen. Nur Antwort. <a class="cta-link" href="/datenschutz.html">Datenschutz</a></p>
+              <p class="form-note muted" id="formStatus" role="status" aria-live="polite"></p>
             </form>
           </div>
         </div>
@@ -192,11 +245,17 @@
     <footer class="site-footer footer">
       <div class="container footer-inner">
         <span>© Human Copy</span>
-        <span class="muted">Impressum • Datenschutz</span>
+        <span class="footer-links">
+          <a href="https://human-copy.com/impressum.html">Impressum</a>
+          <a href="https://human-copy.com/datenschutz.html">Datenschutz</a>
+          <a href="https://human-copy.com/datenschutz.html" data-consent-open>Cookie-Einstellungen</a>
+        </span>
       </div>
     </footer>
   </div>
 
   <script src="app.js" defer></script>
+  <script src="assets/js/form-intent.js" defer></script>
+  <script src="assets/js/formspree-submit.js" defer></script>
 </body>
 </html>
