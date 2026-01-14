@@ -16,7 +16,7 @@
   <div class="topbar">
     <div class="topbar__inner container">
       <a class="brand" href="#top">human-copy</a>
-      <a class="topbar__cta cta cta-primary" href="#mini-audit">Text einreichen</a>
+      <a class="topbar__cta cta cta-primary" href="#mini-audit">Kostenloses Mini-Audit</a>
     </div>
   </div>
 
@@ -24,38 +24,28 @@
     <header class="site-header hero" id="top">
       <div class="container">
         <div class="hero-grid">
-          <div class="hero-copy">
-            <h1 class="hero-title">Die meisten KI-Texte sind nicht falsch.<br>Nur wirkungslos.</h1>
-            <p class="hero-sub">Sie werden gelesen.<br>Aber niemand reagiert.</p>
-            <p class="hero-promise">Ich greife in deinen Text ein.<br>Streiche, was leer ist.<br>Schärfe, was wirken soll.<br>Ohne Marketing-Lärm.</p>
+          <div class="card profile-card reveal">
+            <img class="profile-image" src="assets/img/charlotte.jpg" alt="Portrait von Carlotte" />
+            <p class="profile-copy">
+              Hey, ich bin Carlotte<br>
+              Ich bin Copywriterin und Texterin<br>
+              mit über 3 Jahren Erfahrung im Onlinemarketing.<br>
+              Ich verbinde Menschen mit Worten und unterstütze dich dabei,<br>
+              aus deinen Website-Besuchern zahlende Kunden zu machen.
+            </p>
           </div>
 
-          <section class="form-card" id="mini-audit" aria-labelledby="hero-form-title">
-            <h2 id="hero-form-title">Reich deinen Text ein.</h2>
-            <form id="leadForm" method="POST" action="https://formspree.io/f/mlggrbdv">
-              <input type="hidden" name="request_type" id="request_type" value="mini_audit" />
-              <input type="hidden" name="selected_package" id="selected_package" value="" />
-              <input type="hidden" name="_subject" id="subject" value="[Mini-Audit] Anfrage" />
-              <input type="hidden" name="_next" id="formNext" value="https://human-copy.com/#gesendet" />
-              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-              <label class="form-field" for="leadText">
-                <span>Dein Text</span>
-                <textarea id="leadText" required name="context" rows="6" placeholder="Landingpage, Abschnitt oder Entwurf. Kein Pitch."></textarea>
-              </label>
-              <label class="form-field" for="leadEmail">
-                <span>E-Mail-Adresse</span>
-                <input id="leadEmail" required name="email" type="email" autocomplete="email" placeholder="Für Rückmeldung, nicht für Newsletter." />
-              </label>
-              <label class="form-field" for="leadGoal">
-                <span>Was soll passieren?</span>
-                <input id="leadGoal" name="goal" type="text" autocomplete="off" placeholder="z. B. mehr Anfragen / klarer / weniger KI" />
-              </label>
-              <button class="cta cta-primary" type="submit" id="formSubmit" aria-label="Text einreichen" data-default-label="Text einreichen" data-package-label="Text einreichen">Text einreichen</button>
-              <div class="cta-helper" id="ctaHelper" aria-live="polite" hidden></div>
-              <p class="microcopy">Kein Verkaufsgespräch.<br>Ich sage dir, ob Eingriff sinnvoll ist.</p>
-              <p class="form-note muted" id="formStatus" role="status" aria-live="polite"></p>
-            </form>
-          </section>
+          <div class="card hero-card">
+            <h1 class="hero-title">Texte, die nach dir klingen.<br><span class="hero-title-2">Nicht nach KI</span></h1>
+            <p class="hero-sub">
+              Als Copywriterin überarbeite ich KI-Entwürfe für Landingpages, Blogs und Brand Copy –
+              dort, wo Wirkung entscheidender ist als bloße Erklärung. DACH • DE/EN • 24–48h
+            </p>
+            <div class="hero-actions">
+              <a class="cta cta-primary" href="#mini-audit">Kostenloses Mini-Audit</a>
+              <a class="cta cta-secondary" href="#pakete">Pakete ansehen</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -98,6 +88,53 @@
                 </p>
               </article>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="mini-audit">
+        <div class="container">
+          <div class="card section-card">
+            <h2>Kostenloses Mini-Audit</h2>
+            <p>Schick mir deinen Entwurf und ich gebe dir eine klare Einschätzung, wo dein Text trägt und wo er stolpert.</p>
+            <div class="form-intent" id="formIntent" hidden>
+              <p class="form-intent__text" id="formIntentText"></p>
+              <button class="form-intent__reset" type="button" id="formIntentReset">Ändern</button>
+            </div>
+            <form class="form-card" id="leadForm" method="POST" action="https://formspree.io/f/mlggrbdv">
+              <input type="hidden" name="request_type" id="request_type" value="mini_audit" />
+              <input type="hidden" name="selected_package" id="selected_package" value="" />
+              <input type="hidden" name="_subject" id="subject" value="[Mini-Audit] Anfrage" />
+              <input type="hidden" name="_next" id="formNext" value="https://human-copy.com/#gesendet" />
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+              <div class="form-grid">
+                <label class="form-field">
+                  <span>Name</span>
+                  <input required name="name" type="text" autocomplete="name" />
+                </label>
+                <label class="form-field">
+                  <span>E-Mail</span>
+                  <input required name="email" type="email" autocomplete="email" />
+                </label>
+              </div>
+              <label class="form-field">
+                <span>Text / Link / Kontext</span>
+                <textarea required name="context" rows="6"></textarea>
+              </label>
+              <label class="form-field">
+                <span>Ziel (Leads / Verkauf / Klarheit)</span>
+                <input name="goal" type="text" autocomplete="off" />
+              </label>
+              <label class="form-field">
+                <span>Deadline / Dringlichkeit (optional)</span>
+                <input name="deadline" type="text" autocomplete="off" />
+              </label>
+              <button class="cta cta-primary" type="submit" id="formSubmit" aria-label="Mini-Audit anfragen" data-default-label="Mini-Audit anfragen" data-package-label="Paket anfragen">Mini-Audit anfragen</button>
+              <div class="cta-helper" id="ctaHelper" aria-live="polite" hidden></div>
+              <p class="form-note">Kein Newsletter. Nur Antwort.</p>
+              <p class="form-note muted">Kein Newsletter. Keine Automationen. Nur Antwort. <a class="cta-link" href="/datenschutz.html">Datenschutz</a></p>
+              <p class="form-note muted" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
           </div>
         </div>
       </section>
