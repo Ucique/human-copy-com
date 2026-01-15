@@ -91,10 +91,11 @@ body{
 }
 
 .brand__logo{
-  width: 26px;
-  height: 26px;
+  height: 38px;
+  width: auto;
   border-radius: 6px;
   object-fit: cover;
+  opacity: 0.95;
 }
 
 .topbar__cta{
@@ -328,6 +329,12 @@ body{
   .panel{ grid-column: span 12; }
 }
 
+@media (max-width: 640px){
+  .brand__logo{
+    height: 32px;
+  }
+}
+
 .stack{
   display: grid;
   gap: 18px;
@@ -541,6 +548,18 @@ body{
 
 .footer{
   padding: 32px 0 44px 0;
+}
+
+.footer-logo{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 18px;
+}
+
+.footer-logo__image{
+  width: min(200px, 52vw);
+  height: auto;
+  opacity: 0.9;
 }
 
 .footer-inner{
