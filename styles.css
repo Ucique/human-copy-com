@@ -91,10 +91,11 @@ body{
 }
 
 .brand__logo{
-  width: 26px;
-  height: 26px;
+  height: 38px;
+  width: auto;
   border-radius: 6px;
   object-fit: cover;
+  opacity: 0.95;
 }
 
 .topbar__cta{
@@ -326,6 +327,12 @@ body{
 
 @media (max-width: 640px){
   .panel{ grid-column: span 12; }
+}
+
+@media (max-width: 640px){
+  .brand__logo{
+    height: 32px;
+  }
 }
 
 .stack{
