@@ -188,8 +188,59 @@ body{
 }
 
 .profile-card{
+  max-width: 360px;
+  width: 100%;
   padding: 16px;
   text-align: center;
+  box-sizing: border-box;
+}
+
+.profile-card img{
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.profile-card img{
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.profile-card,
+.left-proof{
+  width: min(100%, var(--side-card-width));
+  max-width: var(--side-card-width);
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.profile-card img{
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.profile-card,
+.left-proof{
+  width: min(100%, var(--side-card-width));
+  max-width: var(--side-card-width);
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.profile-card img{
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .profile-card,
