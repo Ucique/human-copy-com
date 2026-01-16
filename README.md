@@ -41,7 +41,7 @@ Die Datei `public/CNAME` sorgt dafür, dass beim Build die Custom Domain in den 
 ## Google Ads A/B-Test (50/50)
 
 In Google Ads zwei Final URLs hinterlegen und den Traffic splitten:
-- Variante A: `https://human-copy.com/`
+- Variante A: bestehende Hauptseite (Repo A)
 - Variante B: `https://intervention.human-copy.com/`
 
 ## GA4 (optional)

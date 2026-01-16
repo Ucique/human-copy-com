@@ -242,7 +242,9 @@ export default function HumanCopySharpLanding() {
             </h2>
 
             <div className="mt-6 space-y-6 text-lg leading-relaxed text-zinc-100">
-              <p className="font-semibold text-zinc-50">hello@human-copy.com</p>
+              <p className="font-semibold text-zinc-50">
+                hello@intervention.human-copy.com
+              </p>
               <p className="text-zinc-300 italic">Betreff: Intervention</p>
 
               <div className="mt-8 space-y-2">
