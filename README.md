@@ -1,72 +1,60 @@
-# Human Copy Landingpage
+# Human Copy – Intervention (Landingpage B)
 
-This repository contains the source files for **human-copy.com**, a conversion-focused one‑page site for AI‑Humanisierung & Copyediting.
+Minimalistische Landingpage (Variante B) für den A/B-Test. React + Vite + Tailwind.
 
-## Quickstart
+## Lokal starten
 
-1. Clone this repository or use GitHub's web editor to update files.
-2. The site is served directly from `index.html`, along with `styles.css` and `app.js`.
-3. To preview locally, open `index.html` in a browser.
-4. To deploy, push changes to the `main` branch. GitHub Pages will update automatically.
-
-## Deploy on GitHub Pages
-
-1. Go to **Settings → Pages** for this repository.
-2. Under **Source**, choose **Deploy from branch**, select **main** and set **/ (root)** folder.
-3. Add the custom domain **human-copy.com** (must be configured in your DNS).
-4. Ensure the file named `CNAME` in the repository contains:
-
-```
-human-copy.com
+```bash
+npm install
+npm run dev
 ```
 
-5. Toggle **Enforce HTTPS** once DNS is configured.
+Die App läuft standardmäßig auf `http://localhost:5173`.
 
-## DNS Setup
+## Build & Deploy
 
-Create A and AAAA records pointing to GitHub Pages:
-
-```
-A @ 185.199.108.153
-A @ 185.199.109.153
-A @ 185.199.110.153
-A @ 185.199.111.153
-
-AAAA @ 2606:50c0:8000::153
-AAAA @ 2606:50c0:8001::153
-AAAA @ 2606:50c0:8002::153
-AAAA @ 2606:50c0:8003::153
-
-CNAME www human-copy.com
+```bash
+npm ci
+npm run build
 ```
 
-## Form Handling
+Der Deploy läuft automatisch über GitHub Actions (`.github/workflows/deploy.yml`) und veröffentlicht den `dist`-Ordner auf dem Branch `gh-pages`.
 
-The contact form in `index.html` uses [Formspree](https://formspree.io/) if a Formspree endpoint is specified. To enable:
+## GitHub Pages konfigurieren
 
-1. Create a form in Formspree.
-2. Copy your endpoint URL (e.g. `https://formspree.io/f/xyzabc`).
-3. Open `app.js` and set `const FORMSPREE_ENDPOINT = "https://formspree.io/f/xyzabc";`.
+1. Repo öffnen → **Settings** → **Pages**.
+2. **Source**: `Deploy from a branch`.
+3. **Branch**: `gh-pages` und `/ (root)` auswählen.
+4. **Custom domain**: `intervention.human-copy.com`.
+5. Speichern. GitHub erstellt/validiert die HTTPS-Config.
 
-If no endpoint is set, the form falls back to `mailto:hello@human-copy.com`.
+Die Datei `public/CNAME` sorgt dafür, dass beim Build die Custom Domain in den Deploy übernommen wird.
 
-## Analytics Placeholder
+## DNS Setup (intervention.human-copy.com)
 
-There is a commented placeholder for Plausible or GA4 tracking in `index.html`. Replace it with your actual analytics script to enable tracking.
+1. Beim DNS-Provider einen **CNAME** Record anlegen:
+   - **Host/Name**: `intervention`
+   - **Target**: `<USERNAME>.github.io`
+2. Warten, bis die DNS-Änderung propagiert ist (typisch einige Minuten bis Stunden).
+3. In GitHub Pages prüfen, ob die Domain validiert ist und HTTPS aktiv ist.
 
-## Legal Requirements
+## Google Ads A/B-Test (50/50)
 
-For German websites you must include a valid **Impressum** and **Datenschutzerklärung**. Fill out the content in the modals in `index.html` before going live.
+In Google Ads zwei Final URLs hinterlegen und den Traffic splitten:
+- Variante A: bestehende Hauptseite (Repo A)
+- Variante B: `https://intervention.human-copy.com/`
 
-## Final Checklist
+## GA4 (optional)
 
-- [ ] Replace placeholder email addresses with `hello@human-copy.com` (already done).
-- [ ] Enter your Formspree endpoint in `app.js` or confirm mailto fallback.
-- [ ] Configure DNS records and add `human-copy.com` in GitHub Pages.
-- [ ] Fill in **Impressum** and **Datenschutz** content.
-- [ ] Test the contact form and ensure success/error messages display.
-- [ ] Enable HTTPS in GitHub Pages.
+Das GA4-Snippet wird **nur** geladen, wenn `VITE_GA4_ID` gesetzt ist.
 
----
+Lokal:
 
-This project is maintained for the **AI → Human Copy** service.
+```bash
+VITE_GA4_ID=G-XXXXXXXXXX npm run dev
+```
+
+In GitHub Actions:
+1. Repo → **Settings** → **Secrets and variables** → **Actions**.
+2. `VITE_GA4_ID` als **Repository Secret** oder **Variable** anlegen.
+3. Das Vite Build nimmt die Variable automatisch in `index.html` auf.
