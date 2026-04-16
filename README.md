@@ -67,6 +67,9 @@ For German websites you must include a valid **Impressum** and **Datenschutzerkl
 - [ ] Test the contact form and ensure success/error messages display.
 - [ ] Enable HTTPS in GitHub Pages.
 
+- [ ] Trigger Pages rebuild
+- [ ] 
+
 ---
 
 This project is maintained for the **AI → Human Copy** service.
